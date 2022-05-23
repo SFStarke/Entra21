@@ -1,0 +1,43 @@
+package ListaCincoEstruturasDeSelecao;
+
+import java.util.Scanner;
+
+public class Quest04 {
+	
+	/*
+	 * Questão_4: Escreva um PROGRAMA que leia o código de um determinado produto e
+	 * mostre a sua classificação.
+	 */
+	
+	public static void main(String[] args) {
+		int cod;
+		String resposta;
+		
+		Scanner read = new Scanner(System.in);
+		System.out.println("Informe o código do produto: ");
+		cod = read.nextInt();
+		
+		switch (cod) {
+		case 1:
+			resposta = "Alimento não-perecivel.";
+			break;
+		case 2:
+		case 3:
+		case 4:
+			resposta = "Alimento perecivel.";
+			break;
+		case 5:
+		case 6:
+			resposta = "Vestuário.";
+			break ;
+		case 7:
+			resposta = "Higiene Pessoal.";
+			break;
+		
+		}
+		System.out.println(resposta);
+		
+
+		read.close();
+	}
+}

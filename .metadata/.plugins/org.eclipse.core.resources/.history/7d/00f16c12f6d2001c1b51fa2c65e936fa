@@ -1,0 +1,11 @@
+package lista_extra_cinco;
+
+import java.util.Scanner;
+
+public class Quest04 {
+public static void main(String[] args) {
+	Scanner read = new Scanner(System.in);
+	System.out.println("SOLUCIONADOR DE CRIMES:\n¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n");
+	read.close();
+}
+}

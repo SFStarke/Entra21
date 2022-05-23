@@ -1,0 +1,52 @@
+package Lista6EstruturasRepitição;
+
+import java.util.Scanner;
+
+/*Questão 4 - Foi feita uma pesquisa entre os habitantes de uma região e coletados os dados de 
+altura e sexo (0=masc, 1=fem)
+das pessoas. Faça um programa que leia 5 dados diferentes e informe:
+a maior e a menor altura encontradas;
+a média de altura das mulheres;
+a média de altura da população;
+o percentual de homens na população*/
+public class Quest04 {
+	public static void main(String[] args) {
+		Scanner read = new Scanner(System.in);
+		float menorAltura = 0, maiorAltura = 0,altura = 0, mediaAlturaMu = 0, mediaAlturaPop = 0;
+		float totAltura = 0, porcentoHomensPop = 0, homens = 0, mulheres = 0, totAltMulheres = 0;
+		int l = 1;
+		String genero;
+		System.out.println("Pesquisa populacional:\n"
+				+ "#################### ");
+		while(l <= 5) {
+			System.out.println(l);
+			System.out.print("Sua altura? ");
+			altura = read.nextFloat();
+			totAltura += altura;
+			menorAltura = (menorAltura > altura) ? altura: menorAltura;
+			maiorAltura = (maiorAltura < altura) ? altura: maiorAltura;
+			
+			System.out.print("\nSeu genero é? Maculino[m] Feminino[f] ");
+			genero = read.next();
+			if((!genero.equalsIgnoreCase("m"))&&(!genero.equalsIgnoreCase("f"))) {
+				System.out.println("ERRO: Caracter não procedente...");
+			} else {
+				if(genero.equalsIgnoreCase("m")){
+					homens++;
+				}else if(genero.equalsIgnoreCase("f")){
+					mulheres++;
+					totAltMulheres += altura;
+				}
+			}
+			l++;
+		}
+		mediaAlturaPop = totAltura / 5;
+		mediaAlturaMu = totAltMulheres / mulheres;
+		porcentoHomensPop = (homens*100) / 5;
+		
+		System.out.printf("A maior altura é de %.2f m. O menor é de %.2f m.\n¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨"
+				+ "", mediaAlturaPop, maiorAltura);
+		System.out.printf("A média de altura das mulheres é %.2f m.", mediaAlturaMu);
+		read.close();
+	}
+}

@@ -1,0 +1,24 @@
+package Lista6EstruturasRepitição;
+
+import java.util.Scanner;
+
+/*Questão 9 - Construa um programa que receba um número inteiro e
+ *  verifique se o mesmo é primo.
+ */
+public class Quest09 {
+	public static void main(String[] args) {
+		Scanner read = new Scanner(System.in);
+		int numero = 0, resto = 0;
+		
+		System.out.print("Digite um nº inteiro e positivo: ");
+		numero = read.nextInt();
+		
+		for(int i = 0; i <= numero; i++) {
+			if (numero % i == 0) {
+				resto++;
+			}
+		}
+		System.out.println("resto: "+resto);
+		read.close();
+	}
+}

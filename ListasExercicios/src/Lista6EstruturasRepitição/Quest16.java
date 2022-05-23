@@ -1,0 +1,69 @@
+package Lista6EstruturasRepitição;
+
+import java.util.Scanner;
+
+public class Quest16 {
+	/*
+	 * Questao 16 – Faça um programa que leia o nome do usuário e valide as
+	 * seguintes informações: Idade entre 0 e 100 anos Salário: Maior que zero Sexo:
+	 * "f’ ou ‘m’ Estado civil: ‘s’, ‘c’, ‘v’ ‘d’
+	 */
+	public static void main(String[] args) {
+		Scanner read = new Scanner(System.in);
+		String estadoCivil = null, sexo = null, nome, res;
+		int idade = 0;
+		float salario = 0f;
+		boolean ver = true;
+		System.out.print("Validação cadastral:\n##############################\n" 
+		+ "Informe seu nome: ");
+		nome = read.nextLine();
+		do {
+			System.out.print("\nIdade? ");
+			idade = read.nextInt();
+			if ((idade > 0) && (idade <= 100)) {
+				ver = true;
+			} else {
+				ver = false;
+				System.out.println("\nIdade não compactivel...\n¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n");
+				continue;
+			}
+			System.out.print("\nQual é o seu salário? ");
+			salario = read.nextFloat();
+			if (salario > 0) {
+				ver = true;
+			} else {
+				ver = false;
+				System.out.print("\nNão é remunerado...\n¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n");
+				continue;
+			}
+			System.out.print("\nQual é o seu genero? Maculino[m] Feminino[f]");
+			sexo = read.next();
+			if ((sexo.equalsIgnoreCase("m")) || (sexo.equalsIgnoreCase("f"))) {
+				ver = true;
+			} else {
+				ver = false;
+				System.out.println("\nGenero não definido corretamente...\n¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n");
+				continue;
+			}
+			System.out
+					.print("\nSeu estado civil?\n" 
+			+ "[s] Solteiro(a) [c] Casado(a) [v] Viúvo(a) [d] Disquitado(a)\n");
+			estadoCivil = read.next();
+			if ((estadoCivil.equalsIgnoreCase("s")) || (estadoCivil.equalsIgnoreCase("c"))
+					|| (estadoCivil.equalsIgnoreCase("v")) || (estadoCivil.equalsIgnoreCase("d"))) {
+				ver = true;
+			} else {
+				ver = false;
+				System.out.println("\nCaracterre errado...\n¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n");
+				continue;
+			}
+
+		} while (ver == false);
+
+		System.out.println("Cadastro validado:");
+		System.out.printf("\nNome: %s. Idade: %d. Genero: %s.\n" + "Salário: R$%.2f\nEstado civil: %s.", nome, idade,
+				sexo, salario, estadoCivil);
+
+		read.close();
+	}
+}

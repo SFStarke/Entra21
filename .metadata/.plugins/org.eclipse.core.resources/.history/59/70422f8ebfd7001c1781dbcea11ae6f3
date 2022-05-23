@@ -1,0 +1,15 @@
+package Lista6EstruturasRepitição;
+
+public class Quest15 {
+	/*
+	 * Questao 15 – Faça um programa que leia o código e a senha de um usuário. Não
+	 * aceite a senha igual ao código do usuário. Mostrando uma mensagem de erro e
+	 * voltando a pedir as informações. Ob.: Código e senha números positivos
+	 * inteiros
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

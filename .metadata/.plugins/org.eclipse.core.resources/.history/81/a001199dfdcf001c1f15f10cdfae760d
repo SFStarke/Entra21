@@ -1,0 +1,14 @@
+package ListaCincoEstruturasDeSelecao;
+
+public class Quest18 {
+	/*
+	 * Questão 18 – Faça um programa que o usuário entra com uma letra, e o
+programa informa se é uma vogal ou consoante.
+	 * */
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

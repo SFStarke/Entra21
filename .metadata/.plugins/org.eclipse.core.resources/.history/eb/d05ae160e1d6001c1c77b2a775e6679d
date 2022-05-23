@@ -1,0 +1,11 @@
+package Lista6EstruturasRepitição;
+
+public class Quest11 {
+/*Questão 11 - Faça um programa que exiba a tabuada de um número x.
+Obs: tabuada: x*1, x*2 … x*10;*/
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

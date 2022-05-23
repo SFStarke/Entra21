@@ -1,0 +1,36 @@
+package ListaCincoEstruturasDeSelecao;
+
+import java.util.Scanner;
+
+public class Quest03 {
+
+	/*
+	 * Questão_3: Tendo como dados de entrada a altura e o sexo de uma pessoa,
+	 * construa um PROGRAMA que calcule seu peso ideal, utilizando as seguintes fórmulas: 
+	 * Para homens: (72.7*alt) - 58;
+	 * Para mulheres: (62.1*alt) - 44.7;
+	 * */
+	
+	public static void main(String[] args) {
+		float altura, imc;
+		char genero;
+		String imcIdeal; 
+		
+		Scanner read = new Scanner(System.in);
+		System.out.println("Conheça qual seria peso ideal:\n"
+				+ "Informe sua altura? ");
+		altura = read.nextFloat();
+		System.out.println("Informe seu genero? Masculino(m) ou Feminino (f): ");
+		genero = read.next().charAt(0);
+		
+		if (genero == 'm') {
+			imc = (float) (72.7 * altura) - 58f;
+		}else {
+			imc = (float) (62.1 * altura) - 44.7f;
+		}
+		
+		System.out.printf("O peso ideal para voçê seria %.2",imc);
+		
+		read.close();
+	}
+}

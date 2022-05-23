@@ -1,0 +1,43 @@
+package ListaCincoEstruturasDeSelecao;
+
+import java.util.Scanner;
+
+public class Quest12 {
+/*
+ * Questão 12 - Faça um programa para ler o nome do Aluno, as 3 notas obtidas
+por um aluno nas 3 verificações e a média dos
+exercícios que fazem parte da avaliação. Calcular a média de aproveitamento,
+usando a fórmula abaixo
+e escrever o conceito do aluno de acordo com a tabela de conceitos abaixo:
+ 							N1 + N2 * 2 + N3 * 3+Média_dos_Exercícios
+Média_de_Aproveitamento = ---------------------------------------------------------
+ 												7
+
+ * */
+	public static void main(String[] args) {
+		Scanner read = new Scanner(System.in);
+		String nome, conceito;
+		float n1, n2, n3, mExer, mAprovacao;
+		System.out.print("Nome do aluno: ");
+		nome = read.nextLine();
+		System.out.print("\n1ª nota: ");
+		n1 = read.nextFloat();
+		System.out.print("\n2ª nota: ");
+		n2 = read.nextFloat();
+		System.out.print("\n3ª nota: ");
+		n3 = read.nextFloat();
+		System.out.print("\nMédia dos Exercícios: ");
+		mExer = read.nextFloat();
+		System.out.println("***************************");
+		mAprovacao = (n1 + (n2 * 2) + (n3 * 3) + mExer) / 7;
+		System.out.println();
+		conceito = mAprovacao >= 9.0 ? "A" :
+				   (mAprovacao >= 7.5) && (mAprovacao < 9.0) ? "B" :
+				   (mAprovacao >= 6.0) && (mAprovacao < 7.5) ? "C" : "D";
+					   
+		System.out.println("O aluno "+nome+", tem o conceito: "+ conceito);
+		
+		
+		read.close();
+	}
+}

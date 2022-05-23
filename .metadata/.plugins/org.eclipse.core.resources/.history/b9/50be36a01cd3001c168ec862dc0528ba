@@ -1,0 +1,45 @@
+package lista_extra_cinco;
+
+import java.util.Scanner;
+
+public class Quest05 {
+	/*
+	 * Questão 5 – Faça um programa para o calculo de uma folha de pagamento,
+sabendo que os descontos são do imposto de renda, que depende do salário bruto
+(conforme tabela abaixo e 3% para o sindicato e que o FGTS corresponde a 11%
+do salario bruto mas não é descontado ( é a empresa que deposita). O salario
+líquido corresponde ao salário bruto menos os descontos. O programa deverá pedir
+ao usuário o valor da sua hora e a quantidade de horas trabalhadas no mês
+
+	 * */
+
+	public static void main(String[] args) {
+		Scanner read = new Scanner(System.in);
+		float vHoraTrab, hTrab, sBruto, sLiquido, iRenda, fgts, sind;
+		
+		System.out.println("CALCULO SALARIAL:\n*******************************\n");
+		System.out.print("Qual é o valor da hora de trabalho? ");
+		vHoraTrab = read.nextFloat();
+		System.out.print("\nQuantas horas de trabalho ao mês? ");
+		hTrab = read.nextFloat();
+		
+		sBruto = vHoraTrab * hTrab;
+		System.out.println("\nSalario Bruto: "+sBruto);
+		
+		fgts = sBruto * 0.11f; //Este não será debitado do salario.
+		sind = sBruto * 0.03f;
+		
+		iRenda = (float) (sBruto <= 900 ? 0: 
+			sBruto > 900 && sBruto <= 1500 ? sBruto * 0.05:
+			sBruto > 1500 && sBruto <= 2500 ? sBruto * 0.1: 
+			sBruto * 0.2);
+		System.out.println("\nIR: "+iRenda);
+		
+		sLiquido = sBruto - (sind + iRenda);
+		
+		System.out.printf("Salario Bruto: (R$%.2f * %.1f H) = R$%.2f",vHoraTrab, hTrab, sBruto);
+		
+		
+		read.close();
+	}
+}

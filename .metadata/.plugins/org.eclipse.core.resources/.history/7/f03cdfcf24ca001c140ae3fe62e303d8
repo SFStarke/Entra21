@@ -1,0 +1,12 @@
+package exercicio_marco;
+
+import java.util.Scanner;
+
+public class Quest02 {
+
+	public static void main(String[] args) {
+		Scanner read = new Scanner(System.in);
+		
+		
+	}
+}

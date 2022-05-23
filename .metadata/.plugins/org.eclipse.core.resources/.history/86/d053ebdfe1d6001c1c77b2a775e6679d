@@ -1,0 +1,14 @@
+package Lista6EstruturasRepitição;
+
+import java.util.Scanner;
+
+/*Questão 9 - Construa um programa que receba um número inteiro e verifique se o mesmo é
+primo.
+*/
+public class Quest09 {
+	public static void main(String[] args) {
+		Scanner read = new Scanner(System.in);
+
+		read.close();
+	}
+}

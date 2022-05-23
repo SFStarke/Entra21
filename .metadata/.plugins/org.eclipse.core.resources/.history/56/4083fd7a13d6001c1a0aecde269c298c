@@ -1,0 +1,56 @@
+package Lista6EstruturasRepitição;
+
+import java.util.Scanner;
+
+/*Questão 4 - Foi feita uma pesquisa entre os habitantes de uma região e coletados os dados de 
+altura e sexo (0=masc, 1=fem)
+das pessoas. Faça um programa que leia 5 dados diferentes e informe:
+a maior e a menor altura encontradas;
+a média de altura das mulheres;
+a média de altura da população;
+o percentual de homens na população*/
+public class Quest04 {
+	public static void main(String[] args) {
+		Scanner read = new Scanner(System.in);
+		float menorAltura = 5.0f, maiorAltura = 0f,altura = 0f, mediaAlturaMu = 0f, mediaAlturaPop = 0f;
+		float totAltura = 0f, porcentoHomensPop = 0f, homens = 0f, mulheres = 0f, totAltMulheres = 0f;
+		int l = 1;
+		String genero;
+		System.out.println("Pesquisa populacional:\n"
+				+ "#################### ");
+		while(l <= 5) {
+			System.out.println("\n"+l+"º Questionário:");
+			System.out.print("Sua altura? ");
+			altura = read.nextFloat();
+			totAltura += altura;
+			maiorAltura = (maiorAltura < altura) ? altura: maiorAltura;
+			menorAltura = (altura < menorAltura) ? altura: menorAltura;
+			
+			System.out.print("Seu genero é? Maculino[m] Feminino[f] ");
+			genero = read.next();
+			if((!genero.equalsIgnoreCase("m"))&&(!genero.equalsIgnoreCase("f"))) {
+				System.out.println("ERRO: Caracter não procedente...");
+				break;
+			} else {
+				if(genero.equalsIgnoreCase("m")){
+					homens++;
+				}else if(genero.equalsIgnoreCase("f")){
+					mulheres++;
+					totAltMulheres += altura;
+				}
+			}
+			l++;
+		}
+		mediaAlturaPop = totAltura / 5;
+		mediaAlturaMu = totAltMulheres / mulheres;
+		porcentoHomensPop = (homens*100) / 5;
+		
+		System.out.printf("\n#################################\n"
+				+ "A maior altura é de %.2f m. O menor é de %.2f m.\n¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n"
+				+ "", maiorAltura, menorAltura);
+		System.out.printf("A média de altura das mulheres é %.2f m.", mediaAlturaMu);
+		System.out.printf("\nA média da altura populacional é de %.2f m",menorAltura);
+		System.out.printf("\n%.0f porcentos da população é de homens.",porcentoHomensPop);
+		read.close();
+	}
+}

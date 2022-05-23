@@ -1,0 +1,42 @@
+package exercicio;
+
+import java.util.Scanner;
+
+public class Praticar {
+
+	public static void main(String[] args) {
+		Scanner read = new Scanner(System.in);
+		float pro1, pro2, pro3, comprado;
+		int v = 0, l = 1;
+		//float pro[] = new float[2];
+		float pro[] = new float[3];
+		
+		/*while(l <= 3) {
+			System.out.println("Preço do "+l+"º produto:");
+			pro[v] = read.nextFloat();
+			l++;
+		}*/
+		for (int x = 0 ; pro.length ; x++){
+			
+			System.out.println(pro[x]);
+		}
+		
+		/*System.out.print("Preço do 1º produto: ");
+		pro1 = read.nextFloat();
+		System.out.print("Preço do 2º produto: ");
+		pro2 = read.nextFloat();
+		System.out.print("Preço do 3º produto: ");
+		pro3 = read.nextFloat();
+		
+		if ((pro[0] < pro[1]) && (pro[0] < pro[2])) {
+			comprado = pro[0];
+		}else if((pro[1] < pro[2]) && (pro[1] < pro[0])) {
+			comprado = pro[1];
+		}else {
+			comprado = pro[2];
+		}
+		
+		System.out.printf("O produto de menor preço é de R$%.2f",comprado);
+		read.close();*/
+	}
+}

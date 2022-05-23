@@ -1,0 +1,57 @@
+package ListaCincoEstruturasDeSelecao;
+
+import java.util.Scanner;
+
+public class Quest11 {
+/*
+ * Questão_11: Faça um programa que simule uma calculadora com
+as quatro operações básicas (+, -, *, /). O algoritmo deve solicitar ao
+usuário a entrada de dois operandos e da operação a ser executada,
+na forma de um menu. Dependendo da opção escolhida, deve ser
+executada a operação solicitada e escrito seu resultado. Utilize uma
+variável caractere para armazenar a operação a ser executada a
+partir do operador.
+ * */
+	public static void main(String[] args) {
+		Scanner read = new Scanner(System.in);
+		float n1, n2, resFloat;
+		int x1, x2, resInt;
+		char operacao;
+		System.out.print("App Calculadora:\n"
+				+ "**********************************\n"
+				+ "Primeiro número operador: ");
+		n1 = read.nextFloat();
+		System.out.println("\nPara soma........[ + ]\n"
+				+  "Para subtrair....[ - ]\n"
+				+  "Para multiplicar.[ * ]\n"
+				+  "Para dividir.....[ / ]\n");
+		operacao = read.next().charAt(0);
+		System.out.print("Segundo número operador: ");
+		n2 = read.nextFloat();
+		
+		switch (operacao) {
+		case '+':
+			resInt = x1 + x2;
+			break;
+		case '-':
+			resInt = x1 - x2;
+			break;
+		case '*':
+			resFloat = n1 * n2;
+			break;
+		case '/':
+			resFloat = n1 / n2;
+			break;
+		}
+		
+		if ((operacao == '+') && (operacao == '-')) {
+			System.out.println("###################################\n"
+					+ "O resultado de seu operador é: "+resInt);
+		}else if((operacao == '*') && (operacao == '/')) {
+			System.out.println("###################################\n"
+					+ "O resultado de seu operador é: "+resFloat);
+		}
+		read.close();
+	}
+
+}

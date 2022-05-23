@@ -1,0 +1,33 @@
+package Lista6EstruturasRepitição;
+
+import java.util.Scanner;
+
+public class Quest05 {
+	/*Questão 5 - Faça um programa que o usuário informa um número e o programa verifica se ele
+é um número triangular.
+Obs.: Um número é triangular quando o resultado do produto de três números consecutivos.
+Exemplo: 24 = 2 x 3 x 4.*/
+	
+public static void main(String[] args) {
+	Scanner read = new Scanner(System.in);
+	int numero, res = 0;
+	int a = 1, l = 1;
+	System.out.println("Informe um número e saiba se é triangular.");
+	numero = read.nextInt();
+	
+	 while(l == 0){
+		res = a * (a+1)*(a+2);
+		if(res >= numero){
+			break;
+		}
+		a = +1;	
+	 }
+	if (numero == res) {
+		System.out.println("É triangular.");
+	}else {
+		System.out.println("Não é Triangular.");
+	}
+	
+	read.close();
+}
+}

@@ -1,0 +1,29 @@
+package lista_extra_cinco;
+
+import java.util.Scanner;
+
+public class Quest02 {
+
+	public static void main(String[] args) {
+	Scanner read = new Scanner(System.in);
+	float pro1, pro2, pro3, comprado;
+	
+	System.out.print("Preço do 1º produto: ");
+	pro1 = read.nextFloat();
+	System.out.print("Preço do 2º produto: ");
+	pro2 = read.nextFloat();
+	System.out.print("Preço do 3º produto: ");
+	pro3 = read.nextFloat();
+	
+	if ((pro1 < pro2) && (pro1 < pro3)) {
+		comprado = pro1;
+	}else if((pro2 < pro1) && (pro2 < pro3)) {
+		comprado = pro2;
+	}else {
+		comprado = pro3;
+	}
+	
+	System.out.println("O produto de menor preço é de R$"+comprado);
+	read.close();	
+	}
+}

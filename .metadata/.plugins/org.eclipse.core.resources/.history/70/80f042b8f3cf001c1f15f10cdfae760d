@@ -1,0 +1,27 @@
+package ListaCincoEstruturasDeSelecao;
+
+import java.util.Scanner;
+/*
+ * Questão_5: Elabore um PROGRAMA que, dada a idade de
+um nadador, classifique-o em uma categoria:
+ * */
+public class Quest05 {
+	public static void main(String[] args) {
+		Scanner read = new Scanner(System.in);
+		int idade;
+		String categoria;
+		
+		System.out.print("Informe a idade do nadador: ");
+		idade = read.nextInt();
+		System.out.println();
+		
+		if (condition) {
+			
+		} else {
+
+		}
+		
+
+		read.close();
+	}
+}

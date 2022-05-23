@@ -1,0 +1,52 @@
+package lista_extra_cinco;
+
+import java.util.Scanner;
+
+public class Quest04 {
+	
+	public final static void clearConsole()	{
+	    try{
+	        final String os = System.getProperty("os.name");
+
+	        if (os.contains("Windows")) {
+	            Runtime.getRuntime().exec("cls");
+	        }
+	        else {
+	            Runtime.getRuntime().exec("clear");
+	        }
+	    } catch (final Exception e){
+	    }
+	}
+	
+public static void main(String[] args) {
+	Scanner read = new Scanner(System.in);
+	String res1, res2, res3, res4, res5, condicao;
+	int nSim = 0;
+	
+	System.out.println("QUESTIONÁRIO: Para sim [ s ]. Para não [ n ].\n¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n");
+	System.out.print("Telefonou para a vitima? ");
+	res1 = read.next();
+	nSim = res1.equalsIgnoreCase("s") ? +1 : nSim;
+	System.out.print("\nEsteve no local do crime? ");
+	res2 = read.next();
+	nSim = res1.equalsIgnoreCase("s") ? +1 : nSim;
+	System.out.print("\nMora perto da vitima? ");
+	res3 = read.next();
+	nSim = res1.equalsIgnoreCase("s") ? +1 : nSim;
+	System.out.print("\nDevia para vitima? ");
+	res4 = read.next();
+	nSim = res1.equalsIgnoreCase("s") ? +1 : nSim;
+	System.out.print("\nJá trabalhou com a vitima? ");
+	res5 = read.next();
+	nSim = res1.equalsIgnoreCase("s") ? +1 : nSim;
+	System.out.println(nSim);
+	clearConsole();
+	
+	condicao = nSim == 5 ? "Assassino" : nSim == 2 ? "Suspeito" :
+		nSim >= 3 && nSim <= 4? "Cúmplice": "Inocente";
+	
+	System.out.println(condicao);
+	
+	read.close();
+}
+}

@@ -1,0 +1,18 @@
+package ListaCincoEstruturasDeSelecao;
+
+public class Quest11 {
+/*
+ * Questão_11: Faça um programa que simule uma calculadora com
+as quatro operações básicas (+, -, *, /). O algoritmo deve solicitar ao
+usuário a entrada de dois operandos e da operação a ser executada,
+na forma de um menu. Dependendo da opção escolhida, deve ser
+executada a operação solicitada e escrito seu resultado. Utilize uma
+variável caractere para armazenar a operação a ser executada a
+partir do operador.
+ * */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

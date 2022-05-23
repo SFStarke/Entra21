@@ -1,0 +1,32 @@
+package Lista6EstruturasRepitição;
+
+import java.util.Scanner;
+
+public class Quest02 {
+public static void main(String[] args) {
+	Scanner read = new Scanner(System.in);
+	int cnhMais, nMultaMais = 0, cnh, divida, arrecadado, nMulta = 0;
+	char res = 0, res2;
+	do {
+		System.out.print("\nNº do CNH: ");
+		cnh = read.nextInt();
+		System.out.println("\nMultas do portador da CNH nº "+cnh);
+		do {
+			System.out.print("\nValor da multa: R$");
+			divida = read.nextInt();
+			nMulta++;
+			System.out.println("Multa nº "+nMulta+" R$"+divida);
+			if(nMultaMais < nMulta) {
+				nMultaMais = nMulta;
+				cnhMais = cnh;
+			}
+			System.out.print("Mais multa para cadastrar? Sim[s] Não[n]");
+			res2 = read.next().charAt(0);
+		}while(res2 == 's');
+		System.out.print("Novo cadastro de infração de CNH? Sim[s] Não[n]" );
+		res = read.next().charAt(0);
+	}while(res == 's');
+	
+	read.close();
+}
+}

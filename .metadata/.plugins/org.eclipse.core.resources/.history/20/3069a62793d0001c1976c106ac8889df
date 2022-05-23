@@ -1,0 +1,25 @@
+package ListaCincoEstruturasDeSelecao;
+
+import java.util.Scanner;
+
+public class Quest11 {
+/*
+ * Questão_11: Faça um programa que simule uma calculadora com
+as quatro operações básicas (+, -, *, /). O algoritmo deve solicitar ao
+usuário a entrada de dois operandos e da operação a ser executada,
+na forma de um menu. Dependendo da opção escolhida, deve ser
+executada a operação solicitada e escrito seu resultado. Utilize uma
+variável caractere para armazenar a operação a ser executada a
+partir do operador.
+ * */
+	public static void main(String[] args) {
+		Scanner read = new Scanner(System.in);
+		System.out.println("App Calculadora:\nInforme o que deseja fazer:");
+		System.out.println("Pra soma: [ + ]\n"
+						+ "Para subtrair [ - ]\n"
+						+ "Para multiplicar [ * ]"
+						+ "Pra dividir [ / ]");
+		read.close();
+	}
+
+}

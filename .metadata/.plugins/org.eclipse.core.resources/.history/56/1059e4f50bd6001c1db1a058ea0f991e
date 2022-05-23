@@ -1,0 +1,28 @@
+package Lista6EstruturasRepitição;
+
+import java.util.Scanner;
+
+/*Questão 4 - Foi feita uma pesquisa entre os habitantes de uma região e coletados os dados de 
+altura e sexo (0=masc, 1=fem)
+das pessoas. Faça um programa que leia 5 dados diferentes e informe:
+a maior e a menor altura encontradas;
+a média de altura das mulheres;
+a média de altura da população;
+o percentual de homens na população*/
+public class Quest04 {
+	public static void main(String[] args) {
+		Scanner read = new Scanner(System.in);
+		float menorAltura,maiorAltura,altura, mediaAlturaMu, mediaAlturaPop,porcentoHomensPop;
+		int l = 1;
+		System.out.println("Pesquisa de altura e peso entre Homens e Mulheres:\n"
+				+ "#################### ");
+		while(l <= 5) {
+			System.out.println(l);
+			
+			l++;
+		}
+		read.close();
+		
+	}
+
+}

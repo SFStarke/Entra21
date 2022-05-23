@@ -1,0 +1,36 @@
+package ListaCincoEstruturasDeSelecao;
+
+import java.util.Scanner;
+
+public class Quest14 {
+	/*
+	 * Questão 14 - Um banco concederá um crédito especial aos seus clientes,
+variável com o saldo médio no último ano. Faça um programa que leia o saldo
+médio de um cliente e calcule o valor do crédito de acordo com a tabela abaixo.
+Mostre uma mensagem informando o saldo médio e o valor do crédito.
+Saldo médio Percentual
+De 0 a 200, Nenhum crédito
+De 201 a 400, 20% do valor do saldo médio
+De 401 a 600, 30% do valor do saldo médio
+Acima de 601, 40% do valor do saldo médio
+	 * */
+	public static void main(String[] args) {
+		Scanner read = new Scanner(System.in);
+		float media, credito;
+		System.out.println("Percentual de crédito com base a média de saldo:\n"
+				+ "##################################################");
+		System.out.print("\nQual foi o a média do saldo? ");
+		media = read.nextFloat();
+		System.out.println();
+		
+		credito = (float) (((media > 0) && media <= 200) ? 0f : 
+			((media > 201) && (media <= 400)) ? media * 0.20 :
+				((media > 401) && (media <= 600)) ? media * 0.30: 
+					media * 0.40);
+		
+		System.out.println("\nA média de saldo do cliente foi de R$"+media+"\n"
+				+ "Este tem um crédito de R$"+credito);
+		read.close();
+	}
+
+}

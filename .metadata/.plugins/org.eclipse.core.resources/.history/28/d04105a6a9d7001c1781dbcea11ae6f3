@@ -1,0 +1,49 @@
+package Lista6EstruturasRepitição;
+
+import java.util.Scanner;
+
+public class Quest08 {
+	/*
+	 * Questão 8 - Criar um programa que leia os limites inferior e superior de um
+	 * intervalo e imprima todos os números pares no intervalo aberto e seu
+	 * somatório. Suponha que os números digitados são um intervalo crescente.
+	 * Exemplo: Limite inferior: 3 Limite superior: 12 Saída: 4 6 8 10 Soma: 28
+	 */
+	public static void main(String[] args) {
+		Scanner read = new Scanner(System.in);
+		int n = 1, inferior = 10000, superior = 0, somPar = 0, nPar = 0;
+		String saida = "";
+
+		System.out.println("Seletor e calculo  de nº\n¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n"
+				+ "Digite quantos numeros quiser em ordem crescente, e \n"
+				+ "obtenha seu limite inferior e superior e a soma dos numeros pares\n" + "de seu intervalo aberto.");
+		do {
+			n = read.nextInt();
+
+			superior = n < superior ? superior : n;
+			if (n == 0) {
+				break;
+			}
+			inferior = n > inferior ? inferior : n;
+			if (inferior == n) {
+				continue;
+			}else if (n % 2 == 0) {
+				somPar += n;
+				saida += Integer.toString(n) + ". ";
+			}else if(superior == n) {
+				continue;
+			}
+
+		} while (n != 0);
+
+		somPar = inferior % 2 == 0 ? somPar - inferior : somPar;
+		somPar = superior % 2 == 0 ? somPar - superior : somPar;
+		
+		System.out.printf(
+				"\n***************************\nLimite inferiro: %d\nLimite Superior: %d\n" + "Saída: %s\nSoma: %d ",
+				inferior, superior, saida, somPar);
+
+		read.close();
+	}
+
+}

@@ -1,0 +1,27 @@
+package lista_extra_cinco;
+
+import java.util.Scanner;
+
+public class Quest03 {
+	/*
+	 * Questão 3 – Faça um programa que peça ao usuário um numero correspondente a 
+um determinado ano e em seguida informe se este ano é bissexto.
+
+	 * */
+	public static void main(String[] args) {
+		Scanner read = new Scanner(System.in);
+		int ano;
+		boolean bissexto;
+		String resposta =null;
+		System.out.print("Saiba se é ano bissexto:\n¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n"
+				+ " Informe o ano: ");
+		ano = read.nextInt();
+		
+		bissexto = ((ano % 400 == 0)||(ano % 4 == 0 && ano % 100 != 0)) ? true : false;
+		resposta = bissexto == true ? "O ano de "+ano+" é bissexto." :
+			                        "O ano de "+ano+" não é bissexto";
+		System.out.println(resposta);
+		
+		read.close();
+	}
+}

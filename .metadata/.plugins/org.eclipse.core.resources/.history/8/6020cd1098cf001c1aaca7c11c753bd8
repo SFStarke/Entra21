@@ -1,0 +1,31 @@
+package ListaCincoEstruturasDeSelecao;
+
+import java.util.Scanner;
+
+public class Quest03 {
+
+	/*
+	 * Questão_3: Tendo como dados de entrada a altura e o sexo de uma pessoa,
+	 * construa um PROGRAMA que calcule seu peso ideal, utilizando as seguintes fórmulas: 
+	 * Para homens: (72.7*alt) - 58;
+	 * Para mulheres: (62.1*alt) - 44.7;
+	 * */
+	
+	public static void main(String[] args) {
+		real altura;
+		char genero;
+		
+		Scanner read = new Scanner(System.in);
+		System.out.println("Calcule o IMC ideal para voçê:\n"
+				+ "Informe sua altura? ");
+		altura = read.nextFloat();
+		System.out.println("Informe seu genero? Masculino(m) ou Feminino (f): ");
+		genero = read.next().charAt(genero);
+		
+		if (genero == "") {
+			
+		}
+		
+		read.close();
+	}
+}

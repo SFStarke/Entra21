@@ -1,0 +1,21 @@
+package ListaCincoEstruturasDeSelecao;
+
+public class Quest08 {
+	
+	/*
+	 * Questão_8: Pensando no grande número de motoristas que
+viajam no feriado, um posto de combustíveis resolveu fazer
+uma super promoção, oferecendo preços abaixo do mercado:
+Tipo de
+Combustível             Valor por Litro
+Gasolina 				R$ 2,53
+Etanol 					R$ 2,09
+Diesel 					R$ 1,92
+	 * */
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,16 @@
+package ListaCincoEstruturasDeSelecao;
+
+public class Quest17 {
+	/*
+	 * Questão 17 – Faça um programa que o usuário entre com o dia da semana de
+1 a 7 e o programa imprima caso seja Domingo, segunda, Terça, Quarta,
+Quinta, Sexta ou Sábado .
+
+	 * */
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,27 @@
+package Lista6EstruturasRepitição;
+
+public class Quest17 {
+	/*
+	 * Questão 17 – Suponho que a população de um Pais A seja na ordem de 80000
+	 * habitantes com uma taxa anual de crescimento de 3% e que a população B seja
+	 * de 200000 habitantes com uma taxa de crescimento de 1,5% . Faça um programa
+	 * que calcule e escreva o numero de anos necessário para que a população do
+	 * país A ultrapasse ou iguale a população do país B, mantidas as taxas de
+	 * crescimento.
+	 */
+	public static void main(String[] args) {
+		int ano = 0;
+		float paisA = 80000f, paisB = 200000f;
+		
+		System.out.println("Pais A: "+paisA);
+		
+		while (paisA < paisB) {
+			paisA = (paisA * 0.03f) + paisA;
+			paisB = (paisB *0.015f) + paisB;
+			ano++;
+		}
+		System.out.printf("\nO pais A levará %d anos para igualar e ou superar a população de Pais B.",ano);
+		System.out.printf("\nPais A: %.2f. Pais B: %.2f",paisA, paisB);
+	}
+	
+}

@@ -1,0 +1,17 @@
+package Lista6EstruturasRepitição;
+
+public class Quest03 {
+	/*
+	 * uestão 3 - Escreva um programa para mostrar os números entre 1000 e 2000 que quando 
+divididos por 11 dão resto igual a 5.
+	 * */
+public static void main(String[] args) {
+	int mil = 1000, doisMil = 2000;
+	
+	for (int l = mil; l < doisMil; l++) {
+		if(l % 11 == 5) {
+			System.out.println("Nº: "+ l);
+		}
+	}
+}
+}

@@ -1,0 +1,42 @@
+package lista_extra_cinco;
+
+import java.util.Scanner;
+/*
+ * Questão 2 – Faça um programa que pergunte o preço de três produtos e informe
+qual produto você deve comprar, sabendo que a decisão sempre é pelo mais
+barato.
+
+ * */
+public class Quest02 {
+
+	public static void main(String[] args) {
+	Scanner read = new Scanner(System.in);
+	float pro1, pro2, pro3, comprado;
+	int n = 0;
+	int pro[] = new int[2];
+	
+	while(n <= 3) {
+		System.out.println("Preço do "+n+1+"º produto:");
+		pro[n] = read.nextFloat();
+		n++;
+	}
+	
+	/*System.out.print("Preço do 1º produto: ");
+	pro1 = read.nextFloat();
+	System.out.print("Preço do 2º produto: ");
+	pro2 = read.nextFloat();
+	System.out.print("Preço do 3º produto: ");
+	pro3 = read.nextFloat();
+	
+	if ((pro1 < pro2) && (pro1 < pro3)) {
+		comprado = pro1;
+	}else if((pro2 < pro1) && (pro2 < pro3)) {
+		comprado = pro2;
+	}else {
+		comprado = pro3;
+	}
+	
+	System.out.printf("O produto de menor preço é de R$%.2f",comprado);
+	read.close();	*/
+	}
+}

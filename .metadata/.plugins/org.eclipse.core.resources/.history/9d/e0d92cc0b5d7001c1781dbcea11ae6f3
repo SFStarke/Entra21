@@ -1,0 +1,14 @@
+package Lista6EstruturasRepitição;
+
+public class Quest14 {
+	/*
+	 * Questão 14 – Faça um programa que calcule o valor total investido por um
+	 * colecionador de em sua coleção de CDs e o valor médio gasto em cada um deles.
+	 * O usuário deverá informar a quantidade de CDs e o valor para cada um deles.
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
