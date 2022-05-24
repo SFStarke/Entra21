@@ -6,29 +6,25 @@ public class Praticar {
 
 	public static void main(String[] args) {
 		Scanner read = new Scanner(System.in);
-		int cobrado, pago, troco, un = 0, des, cen;
-		String recusado;
-		System.out.print("Calculo de troco:\n####################\n"
-				+ "Valor cobrado? R$");
-		cobrado = read.nextInt();
-		System.out.print("\nValor pago? R$");
-		pago = read.nextInt();
+		int [][] notasAlunos = new int [3][2];
 		
-		troco = pago - cobrado;
-		System.out.println("Troco... "+troco);
-		
-		recusado = (troco < 0) ? "Recusado": "Aceito";
-		
-		switch (recusado) {
-		case "Recusado":
-			System.out.println("Foi recusado pagamento...");
-			break;
-		case "Aceito":
-			un = ((troco > 0)&&(troco <= 10)) ? troco: 0;
-			break;
+		for(int s = 0 ; s < 3; s++) {
+			System.out.println("*****************************");
+			System.out.print(s+1+"º Aluno: ");
+			for(int x = 0 ; x < 2; x++ ) {
+				System.out.println();
+				System.out.print(x+1+"ª Nota: ");
+				notasAlunos [s][x]= read.nextInt();
+			}
+		}
+		for(int a = 0; a <3; a++) {
+			System.out.println();
+			System.out.print(a+1+"º Aluno: ");
+			for(int b = 0; b < 2; b++) {
+				System.out.print(notasAlunos[a][b]+". ");
+			}
 		}
 		
-		System.out.println(un+" nota de um real.");
 		read.close();
 	}
 }
