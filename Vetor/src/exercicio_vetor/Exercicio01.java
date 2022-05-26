@@ -2,7 +2,7 @@ package exercicio_vetor;
 
 import java.util.Scanner;
 
-public class Exercio01 {
+public class Exercicio01 {
 	// Criar dois vetores inteiros com tamanho 10, imprimir o menor vetor e
 	// o maior vetor de sua soma no final.
 	public static void main(String[] args) {
