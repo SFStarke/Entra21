@@ -6,7 +6,7 @@ public class QuestionarioCinema {
 
 	public static void main(String[] args) {
 		Scanner read = new Scanner(System.in);
-		int capacidadeMax = 5, idade = 0, loop = 0;
+		int capacidadeMax = 15, idade = 0, loop = 0;
 		int qtdOtimos = 0, qtdBom=0, qtdBomRegular = 0, qtdRegular=0, qtdRuim = 0, qtdPessimo = 0;
 		int maiorIdadePessimo = 0, DifIdadeMaiorOtimoRuim = 0, maiorIdadeOtimo = 0;
 		int maiorIdadeRuim = 0, opiniao = 0;
