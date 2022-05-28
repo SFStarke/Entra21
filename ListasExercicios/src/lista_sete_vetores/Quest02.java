@@ -1,6 +1,5 @@
 package lista_sete_vetores;
 
-import java.util.Iterator;
 import java.util.Scanner;
 
 public class Quest02 {
