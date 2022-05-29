@@ -11,7 +11,7 @@ locação grátis que ele tem direito.
 public class Quest17 {
 
 	public static void main(String[] args) {
-		String cliente[] = new String[5];
+		String cliente[] = new String[1];
 		int dvd[] = new int[cliente.length];
 		int prom = 0;
 		Scanner read = new Scanner(System.in);
@@ -21,15 +21,18 @@ public class Quest17 {
 
 		for (int i = 0; i < cliente.length; i++) {
 			System.out.print("Nome do Cliente: ");
-			cliente[i] = read.next();
-			
+			cliente[i] = read.nextLine();
+			if(i > 0) {
+				cliente[i] =  read.nextLine();
+			}
 			System.out.print("Quantos DVDs foram locados este ano? ");
 			dvd[i] = read.nextInt();
 		}
+		System.out.println("¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n");
 		for(int i = 0 ; i < dvd.length; i++) {
 			if(dvd[i] > 0 && dvd[i] < 10) {
 				prom = 0;
-				System.out.print("O cliente "+cliente+" tem direito a "+prom+" locação gratis.\n");
+				System.out.print("O cliente "+cliente+" ainda não tem direito a locação gratis.\n");
 			}else if(dvd[i] >= 10 && dvd[i] < 100){
 				prom = dvd[i]/10;
 				System.out.print("O cliente "+cliente+" tem direito a "+prom+" locação gratis.\n");
@@ -38,8 +41,10 @@ public class Quest17 {
 				System.out.print("O cliente "+cliente+" tem direito a "+prom+" locação gratis.\n");
 			}
 		}
-		
-		/*for(int i = 0; i < cliente.length; i++) {
+		read.close();
+	}
+}
+/*for(int i = 0; i < cliente.length; i++) {
 			System.out.println("Cliente: "+cliente[i]);
 			System.out.println("DVDs: "+dvd[i]);
 		}
@@ -54,12 +59,9 @@ public class Quest17 {
 				}
 			}
 		}*/
-		
-		read.close();
-		/*
-		 * do { System.out.print("Nome do Cliente: "); cliente[x] = read.nextLine();
-		 * System.out.print("Quantos DVDs foram locados este ano? "); dvd[x] =
-		 * read.nextInt(); x++; }while(x < cliente.length);
-		 */
-	}
-}
+
+/*
+ * do { System.out.print("Nome do Cliente: "); cliente[x] = read.nextLine();
+ * System.out.print("Quantos DVDs foram locados este ano? "); dvd[x] =
+ * read.nextInt(); x++; }while(x < cliente.length);
+ */
