@@ -5,7 +5,12 @@ import java.util.Scanner;
 public class Praticar {
 
 	public static void main(String[] args) {
-		Scanner read = new Scanner(System.in);
+		int [] a = new int[5];
+		
+		for (int i = 0; i < a.length; i++) {
+			System.out.println(a[i]);
+		}
+		/*Scanner read = new Scanner(System.in);
 		int [][] notasAlunos = new int [3][2];
 		
 		for(int s = 0 ; s < 3; s++) {
@@ -25,6 +30,6 @@ public class Praticar {
 			}
 		}
 		
-		read.close();
+		read.close();*/
 	}
 }
