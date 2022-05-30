@@ -34,7 +34,7 @@ public static void main(String[] args) {
 	}
 	for (int i = 0; i < n1.length; i++) {
 		res = (result[i] >= 7) ? "Aluno "+x+" APROVADO com média "+result[i]+"\n" :
-			"Aluno "+x+" REVADO com média "+result[i]+"\n";
+			"Aluno "+x+" REPROVADO com média "+result[i]+"\n";
 		x++;
 		System.out.println(res);
 	}

@@ -14,7 +14,7 @@ public class Quest08 {
 	public static void main(String[] args) {
 		Scanner read = new Scanner(System.in);
 		int a[] = new int[10];
-		int soma = 0, media = 0, igual = 0;
+		int soma = 0, media = 0, somaMais = 0, igual = 0, mais15 = 0;
 
 		System.out.println(
 				"Conheça quantos nº iguais ha de 15,\n"
@@ -29,15 +29,16 @@ public class Quest08 {
 			} else if (a[i] == 15) {
 				igual++;
 			} else if (a[i] > 15) {
-				media++;
+				somaMais+= a[i];
+				mais15 ++;
 			}
 		}
-		media = (media*100)/a.length;
+		media = (somaMais)/mais15;
 		
 		System.out.printf("Neste vetor há;\n"
 				+ "%d numeros menores que quinze (15).\n"
 				+ "%d iguais a quinze (15).\n"
-				+ "E a média de numeroe que são maiores que quinze (15) é %d porcento.",soma,igual,media);
+				+ "E a média dos números que são maiores que quinze (15) é %d .",soma,igual,media);
 		read.close();
 	}
 }

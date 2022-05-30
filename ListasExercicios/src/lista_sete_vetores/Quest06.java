@@ -20,7 +20,7 @@ public static void main(String[] args) {
 		tot = (a[i]%2 != 0) ? tot+=a[i]: tot;
 		soma = (a[i]%2 != 0) ? (soma+=1): soma;
 	}
-	System.out.println("A média dos nº impaes neste vetor é: "+tot / soma);
+	System.out.println("A média dos nº impares neste vetor é: "+tot / soma);
 	read.close();
 }
 }

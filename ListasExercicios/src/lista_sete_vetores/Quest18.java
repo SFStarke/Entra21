@@ -26,6 +26,10 @@ public class Quest18 {
 			System.out.println("Vetor ["+i+"]: "+x[i]);
 		}
 		
+		/*for(int i = 0; i < x.length; i++) {
+			System.out.println("Vetor ["+i+"]: "+x[i]);
+		}*/
+		
 		/*int primo = 0, loop = 1, n = 101, b = 0, completar = 0;
 		
 		do {
