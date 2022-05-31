@@ -10,7 +10,7 @@ são múltiplos de 5.
  * */
 	public static void main(String[] args) {
 		Scanner read = new Scanner(System.in);
-		int a[] = new int [10];
+		int a[] = new int [4];
 		int soma = 0;
 		System.out.println("Conheça a soma dos nº multiplos de cinco contidas no vetor: ");
 		for(int i = 0; i < a.length; i++) {

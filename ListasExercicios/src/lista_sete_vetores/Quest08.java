@@ -13,7 +13,7 @@ elementos armazenados no vetor que são superiores a 15.*/
 public class Quest08 {
 	public static void main(String[] args) {
 		Scanner read = new Scanner(System.in);
-		int a[] = new int[10];
+		int a[] = new int[4];
 		int soma = 0, media = 0, somaMais = 0, igual = 0, mais15 = 0;
 
 		System.out.println(

@@ -22,7 +22,7 @@ C[i] = A[i] / float(B[i]).
 
 	public static void main(String[] args) {
 		Scanner read = new Scanner(System.in);
-		int a[] = new int [10];
+		int a[] = new int [4];
 		int b[] = new int [a.length];
 		float c[] = new float [a.length];
 		System.out.println("Exercício de calculos entre os Vetores A e B:\n¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n"

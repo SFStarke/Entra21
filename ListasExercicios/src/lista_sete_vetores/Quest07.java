@@ -8,7 +8,7 @@ respectivamente, armazenados neste vetor.
 public class Quest07 {
 public static void main(String[] args) {
 	Scanner read = new Scanner(System.in);
-	int a[] = new int [10];
+	int a[] = new int [4];
 	int totPar = 0, totImpar = 0;
 	int par = 0, impar = 0;
 	

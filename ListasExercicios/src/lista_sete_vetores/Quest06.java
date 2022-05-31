@@ -9,7 +9,7 @@ que defina e escreva a média aritmética simples dos elementos
 	 * */
 public static void main(String[] args) {
 	Scanner read = new Scanner(System.in);
-	int a[] = new int [10];
+	int a[] = new int [4];
 	float tot = 0f ;
 	int soma=0;
 	

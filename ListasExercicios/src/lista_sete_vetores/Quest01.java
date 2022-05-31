@@ -12,7 +12,7 @@ B[i] = A[i] * A[i].
 	
 	public static void main(String[] args) {
 		Scanner read = new Scanner(System.in);
-		int a[] = new int[15];
+		int a[] = new int[4];
 		int b[] = new int[a.length];
 		
 		System.out.println("Exercício do quadrado entre vetor A para B: ");
