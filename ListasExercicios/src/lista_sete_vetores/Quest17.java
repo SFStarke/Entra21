@@ -11,7 +11,7 @@ locação grátis que ele tem direito.
 public class Quest17 {
 
 	public static void main(String[] args) {
-		String cliente[] = new String[5];
+		String cliente[] = new String[1];
 		int dvd[] = new int[5];
 		int prom = 0;
 		Scanner read = new Scanner(System.in);
@@ -33,11 +33,8 @@ public class Quest17 {
 			if(dvd[i] > 0 && dvd[i] < 10) {
 				prom = 0;
 				System.out.print("O cliente "+cliente[i]+" ainda não tem direito a locação gratis.\n");
-			}else if(dvd[i] >= 10 && dvd[i] < 100){
+			}else if(dvd[i] >= 10 && dvd[i] < 1000){
 				prom = dvd[i]/10;
-				System.out.print("O cliente "+cliente[i]+" tem direito a "+prom+" locação gratis.\n");
-			}else if(dvd[i] >= 100 && dvd[i] < 1000) {
-				prom = dvd[i]/100;
 				System.out.print("O cliente "+cliente[i]+" tem direito a "+prom+" locação gratis.\n");
 			}
 		}

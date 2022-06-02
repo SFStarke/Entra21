@@ -13,7 +13,7 @@ estará “aprovado”, caso contrário, a situação do aluno será
  * */
 public class Quest10 {
 public static void main(String[] args) {
-	float[] n1 = new float[10];
+	float[] n1 = new float[4];
 	float[] n2 = new float[n1.length];
 	float[] result = new float[n1.length];
 	String res = "";

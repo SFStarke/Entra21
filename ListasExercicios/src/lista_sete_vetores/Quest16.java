@@ -7,7 +7,7 @@ public class Quest16 {
 retirando todos os valores nulos ou negativos e mostre então o vetor compactado.
 */
 	public static void main(String[] args) {
-		int a[] = new int[20];
+		int a[] = new int[5];
 		Scanner read = new Scanner(System.in);
 		//int aleatorio = 0;
 		
