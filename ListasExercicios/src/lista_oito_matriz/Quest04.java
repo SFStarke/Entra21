@@ -70,7 +70,7 @@ public class Quest04 {
 					System.out.print("Digite a hora: ");
 					int hora = read.nextInt();
 					if(agenda[--dia][--hora] != null) {
-						System.out.println("\nSeu compromisso do dia é:\n"+agenda[dia][hora]);
+						System.out.println("\nSeu compromisso é:\n"+agenda[dia][hora]);
 					}else {
 						System.out.println("\nSEM COMPROMISSO AGENDADO...");
 					}
