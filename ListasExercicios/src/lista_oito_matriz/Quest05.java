@@ -96,7 +96,6 @@ public class Quest05 {
 		System.out.println("\nAgenda fechada.");
 
 		ent.close();
-
 	}
 
 }
