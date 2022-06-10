@@ -35,7 +35,7 @@ public class Quest02 {
 	        }
 	        System.out.printf("\n##############################\n"
 	                + "A quantidade de nº pares foi de %d.\n"
-	                + "A quantidade de nº impares fois de %d.\n", par, impar);
+	                + "A quantidade de nº impares foi de %d.\n", par, impar);
 	        read.close();
 	}
 
