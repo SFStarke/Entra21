@@ -12,7 +12,7 @@ public class MinhaVelha {
 		int spot = 1, init = 0, numero = 1;
 		boolean loopnumDig = false;
 
-		System.out.println("        JOGO DA VELHA");
+		System.out.println("        JOGO DA VELHA\n O Jogador [ X ] Sempre Começa:");
 
 		while (loop <= 9) {
 			spot = 1;
@@ -47,6 +47,8 @@ public class MinhaVelha {
 						numero++;
 					}
 				}
+				System.out.print("\n____________________________"
+						+ "\nJogador [ O ]:\n");
 				jogador--;
 			}else {
 				for (int i = 0; i < velha.length; i++) {
@@ -57,6 +59,8 @@ public class MinhaVelha {
 						numero++;
 					}
 				}
+				System.out.print("\n____________________________"
+						+ "\nJogador [ X ]:\n ");
 				jogador++;
 			}
 
