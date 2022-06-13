@@ -1,4 +1,4 @@
-package exercicios;
+package salario_bonus;
 
 public class SalarioBonus {
 
@@ -8,19 +8,19 @@ public class SalarioBonus {
 			
 			if (salario > 1000) {
 				bonus = (float) (salario * 0.10);
-				System.out.print("Seu porcentual de bonus é de 10%: ");
+				System.out.print("Seu porcentual de bonus ï¿½ de 10%: ");
 			}else {
 				bonus = (float)(salario * 0.15);
-				System.out.print("Seu porcentual de bonus é de 15%: ");
+				System.out.print("Seu porcentual de bonus ï¿½ de 15%: ");
 			}
 			System.out.println("");
 			System.out.printf("No Procedimento if else: R$%.2f\n",bonus);
 
-		// Operador Lógico Relacional Ternário...
+		// Operador Lï¿½gico Relacional Ternï¿½rio...
 			
 			System.out.println("###################################################");
 			
 			bonus = (float) ((salario > 1000) ? (salario * 0.10) : (salario * 0.15));
-			System.out.println("No ternário: R$"+bonus);
+			System.out.println("No ternï¿½rio: R$"+bonus);
 	}
 }
