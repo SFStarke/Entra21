@@ -66,7 +66,7 @@ public class MinhaVelha {
 				System.out.print("\n¨¨¨¨¨¨¨¨¨¨¨¨¨\nVez do [ X ]:\n ");
 				jogador--;
 			}
-			//cONDICIONAL QUE AVALIA GANHADOR
+			//CONDICIONAL QUE AVALIA GANHADOR
 			if ((velha[0][0] == velha[0][1] && velha[0][0] == velha[0][2] && velha[0][0] == "X")
 			 || (velha[1][0] == velha[1][1] && velha[1][0] == velha[1][2] && velha[1][0] == "X")
 			 || (velha[2][0] == velha[2][1] && velha[2][0] == velha[2][2] && velha[2][0] == "X")
@@ -88,7 +88,7 @@ public class MinhaVelha {
 				System.out.println("\nO [ O ] venceu! Parabéns!!!");
 				break;
 			}
-			if (loop == 8) {
+			if (loop == 8) {//Condiciona que avalia empate.
 				System.out.println("\nJogo empatado.\n--FIM--");
 				break;
 			}
