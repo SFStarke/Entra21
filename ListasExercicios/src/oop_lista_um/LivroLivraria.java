@@ -5,7 +5,7 @@ package oop_lista_um;
  *venda em uma livraria.
  */
 public class LivroLivraria {
-	float preço;
-	public int paginas;
-	public String autor, assunto;
+	 float preço;
+	 int cpf;
+	 String autor, genero, cliente, titulo;
 }

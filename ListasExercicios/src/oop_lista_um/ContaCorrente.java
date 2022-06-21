@@ -4,7 +4,7 @@ package oop_lista_um;
  *um limite.
  */
 public class ContaCorrente {
-	int numero;
+	int numero, cpf;
 	float saldo, limite;
-	String status;
+	String nome, status, classe;
 }

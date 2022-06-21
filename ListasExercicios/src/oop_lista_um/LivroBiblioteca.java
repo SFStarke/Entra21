@@ -5,7 +5,7 @@ public class LivroBiblioteca {
 	 *“LivroDeBiblioteca” que represente os dados básicos de um livro de uma 
 	 *biblioteca, que pode ser emprestado a leitores.
 	 */
-		public int paginas, data;
-		public String autor, assunto;
-		String usuario, titulos; 
+		 int cpf, fone;
+		 String autor, genero, titulo;
+		 String usuario, endereco, data; 
 	}

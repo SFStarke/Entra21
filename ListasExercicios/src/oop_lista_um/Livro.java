@@ -5,6 +5,6 @@ package oop_lista_um;
  *  preocupar com a sua finalidade.
  */
 public class Livro {
-	public int paginas;
-	public String autor, assunto;
+	 int paginas;
+	 String autor, assunto;
 }
