@@ -6,41 +6,6 @@ public class Filhos {
 
 	public static void main(String[] args) {
 		Scanner read = new Scanner(System.in);
-		int x = 0, f = 0;
-		
-		System.out.print("Quantas pessoas serão entrevistadas? ");
-		x = read.nextInt();
-		String [][][] fam = new String [x][][];
-		
-		for (int i = 0; i < fam.length; i++) {
-			System.out.print(i+1+"ª Entrevistado:\nQuantos filhos? ");
-			f = read.nextInt();
-			fam[i] = new String[f][];
-			for (int  j = 0;  j < fam[i].length;  j++) {
-				fam [i][j] = new String [2];
-				for (int k = 0; k < fam[i][j].length; k++) {
-					if(k == 0) {
-						System.out.print("Nome do filho: ");
-						fam[i][j][k] = read.next();
-					}else {
-						System.out.print("Sua Idade: ");
-						fam[i][j][k] = read.next();
-					}
-				}
-			}
-		}
-		
-		for (int i = 0; i < fam.length; i++) {
-			for (int j = 0; j < fam[i].length; j++) {
-				for (int k = 0; k < fam[i][j].length; k++) {
-					System.out.println(fam[i][j][k]);
-				}
-			}
-		}
-		
-		
-		read.close();
-		/*Scanner read = new Scanner(System.in);
 		int pessoas = 0, filhos = 0;
 
 		System.out.print("Quantas pessoas serão entrevistadas? ");
@@ -72,6 +37,6 @@ System.out.print(i + 1 + "º Entrevistado:\nQuantos filhos você tem? ");
 				}
 			}
 		}
-		read.close();*/
+		read.close();
 	}
 }
