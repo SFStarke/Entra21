@@ -9,10 +9,10 @@ package oop_lista_dois;
  */
 public class ContaCorrente {
 	int numero;
-	float saldo, saque, deposito, limite;
+	float saldo, saque, deposito, limite = 1000f;
 	String nome, status, classe;
 	boolean conta, especial;
-	
+
 	void abrirConta(int num, String nom, double dep, boolean esp) {
 		numero = num;
 		nome = nom;
@@ -20,29 +20,49 @@ public class ContaCorrente {
 		especial = esp;
 		conta = true;
 	}
+
 	void saqueConta(double valor) {
-		System.out.println("#########################");
 		saque = (float) valor;
-		if(saldo >= saque) {
-			saldo -= saque;
-			System.out.println("Saque bem sucedido no valor de R$"+valor+"...");
-		}else {
-			System.out.println("Saldo insuficiente...");
+		if (especial == true) {
+			if (saldo >= saque) {
+				saldo -= saque;
+				System.out.println("Saque bem sucedido no valor de R$" + valor);
+			} else if((saldo > 0)&&(limite > 0)&&(saldo + limite >= saque)){
+				System.out.println("Saque bem sucedido no valor de R$"+valor);
+				double diferenca = 0;
+				diferenca = saque - saldo;
+				saldo = 0;
+				limite -= diferenca;
+			}else if(saldo + limite < saque) {
+				System.out.println("Saldo insuficiente para saque");
+			}
+		} else if (especial == false) {
+			if(saldo >= saque) {
+				saldo -= saque;
+				System.out.println("Saque bem sucedido no valor de R$" + valor);
+			}else if(saldo < saque){
+				System.out.println("Saldo Insuficente para Saque...");
+			}
 		}
 	}
+
 	void depositoConta(double valor) {
-		System.out.println("#########################");
 		deposito = (float) valor;
-		saldo = deposito;
+		saldo += deposito;
+		System.out.println("Depósito Realizado no Valor de R$"+valor);
 	}
+
 	void consulta() {
-		System.out.println("#########################");
-		if(conta == false) {
+		if (conta == false) {
 			System.out.println("Conta inesistente...");
-		}else {
-			String res = especial == true ? "Cliente usa cheque especial\n": "Cliente não usa cheque especial\n";
-			System.out.println(res+"Conta nº "+numero+". Titular: "+nome+"\n"
-					+ "Saldo é R$"+saldo);
+		}
+		if (especial == false){
+			String res = especial == true ? "\nSTATUS DA CONTA\nCliente usa cheque especial\n" : "\nSTATUS DA CONTA\nCliente não usa cheque especial\n";
+			System.out.println(res + "Conta nº " + numero + ". Titular: " + nome + "\n" + "Saldo é R$" + saldo);
+		}else if(especial == true) {
+			String res = especial == true ? "\nSTATUS DA CONTA\nCliente usa cheque especial\n" : "\nSTATUS DA CONTA\nCliente não usa cheque especial\n";
+			System.out.println(res + "Conta nº " + numero + ". Titular: " + nome + "\n" + "Saldo: R$" + saldo+"\n"
+					+ "Saldo Limite Especial: R$"+limite);
 		}
 	}
 }
