@@ -9,7 +9,7 @@ public class Lampada {
 	String status;
 	boolean ligado;
 	
-	void botãoLampada() {
+	void LigarDesligar() {
 		if(ligado == false) {
 			ligado = true;
 			status = "ligado";
@@ -19,7 +19,9 @@ public class Lampada {
 		}
 	}
 	void statusLampada() {
-		System.out.println("A lampada está "+status);
+		System.out.println("FABRICANTE: "+fabricante+
+				"\nMODELO: "+modelo+". POTÊNCIA: "+
+				potencia+"W\n\nA lampada está "+status);
 	}
 	
 }

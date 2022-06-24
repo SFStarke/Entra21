@@ -9,11 +9,11 @@ package oop_lista_dois;
  */
 public class ContaCorrente {
 	int numero;
-	float saldo, saque, deposito, limite = 1000f;
+	float saldo, saque, deposito, limite = 1000f, totLimite = 1000f;
 	String nome, status, classe;
 	boolean conta, especial;
 
-	void abrirConta(int num, String nom, double dep, boolean esp) {
+	void abrirConta(int num, String nom, float dep, boolean esp) {
 		numero = num;
 		nome = nom;
 		saldo = (float) dep;
@@ -21,19 +21,19 @@ public class ContaCorrente {
 		conta = true;
 	}
 
-	void saqueConta(double valor) {
+	void saqueConta(float valor) {
 		saque = (float) valor;
 		if (especial == true) {
 			if (saldo >= saque) {
 				saldo -= saque;
 				System.out.println("Saque bem sucedido no valor de R$" + valor);
-			} else if((saldo > 0)&&(limite > 0)&&(saldo + limite >= saque)){
+			} else if((saldo > 0)&&(totLimite > 0) && (saldo + totLimite >= saque)){
 				System.out.println("Saque bem sucedido no valor de R$"+valor);
-				double diferenca = 0;
+				float diferenca = 0;
 				diferenca = saque - saldo;
 				saldo = 0;
-				limite -= diferenca;
-			}else if(saldo + limite < saque) {
+				totLimite -= diferenca;
+			}else if(saldo + totLimite < saque) {
 				System.out.println("Saldo insuficiente para saque");
 			}
 		} else if (especial == false) {
@@ -46,10 +46,27 @@ public class ContaCorrente {
 		}
 	}
 
-	void depositoConta(double valor) {
-		deposito = (float) valor;
+	void depositoConta(float valor) {
+		deposito =  valor;
+		if(especial == false) {
 		saldo += deposito;
 		System.out.println("Depósito Realizado no Valor de R$"+valor);
+		}else {
+			if(totLimite < limite) {
+				if(valor + totLimite <= limite) {
+					totLimite +=  valor;
+				}else if(valor + totLimite >= limite){
+					float depSaldo  = (valor + totLimite) - limite;
+					float depLimite =  valor - depSaldo;
+					this.saldo += depSaldo;
+					this.totLimite += depLimite;
+				}
+				System.out.println("Depósito Realizado no Valor de R$"+valor);
+			}else if(totLimite == limite) {
+				this.saldo += valor;
+				System.out.println("Depósito Realizado no Valor de R$"+valor);
+			}
+		}
 	}
 
 	void consulta() {
@@ -57,12 +74,12 @@ public class ContaCorrente {
 			System.out.println("Conta inesistente...");
 		}
 		if (especial == false){
-			String res = especial == true ? "\nSTATUS DA CONTA\nCliente usa cheque especial\n" : "\nSTATUS DA CONTA\nCliente não usa cheque especial\n";
-			System.out.println(res + "Conta nº " + numero + ". Titular: " + nome + "\n" + "Saldo é R$" + saldo);
+			System.out.println("\nSTATUS DA CONTA\nCliente não usa cheque especial\nConta nº " +
+		numero + ". Titular: " + nome + "\n" + "Saldo é R$" + saldo);
 		}else if(especial == true) {
-			String res = especial == true ? "\nSTATUS DA CONTA\nCliente usa cheque especial\n" : "\nSTATUS DA CONTA\nCliente não usa cheque especial\n";
-			System.out.println(res + "Conta nº " + numero + ". Titular: " + nome + "\n" + "Saldo: R$" + saldo+"\n"
-					+ "Saldo Limite Especial: R$"+limite);
+			System.out.println("\nSTATUS DA CONTA\nCliente usa cheque especial\nConta nº " +
+		numero + ". Titular: " + nome + "\n" + "Saldo: R$" + saldo+"\n"
+					+ "Saldo Limite Especial: R$"+totLimite);
 		}
 	}
 }
