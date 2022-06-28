@@ -5,4 +5,5 @@
     <fullyQualifiedTypeName name="livro.Livro"/>
     <fullyQualifiedTypeName name="java.util.concurrent.ForkJoinPool"/>
     <fullyQualifiedTypeName name="javax.swing.text.StyledEditorKit.ForegroundAction"/>
+    <fullyQualifiedTypeName name="java.lang.Readable"/>
 </qualifiedTypeNameHistroy>

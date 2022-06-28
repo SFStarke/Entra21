@@ -1,9 +1,35 @@
 package oop_lista_dois;
 
+//import java.util.Scanner;
+
 public class MainAluno {
 
 	public static void main(String[] args) {
 		Aluno a = new Aluno();
+	/*	Scanner read = new Scanner(System.in);
+		String nome, cur;
+		int matri;
+		
+		System.out.print("Informe o nº da matrícula: ");
+		matri = read.nextInt();
+		System.out.print("Nome do aluno: ");
+		nome = read.next();
+		System.out.print("Curdo:");
+		cur = read.next();
+			
+		a.aluno(nome, matri, cur);
+		
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 3; j++) {
+				
+			}
+		}
+			
+		a.aval();
+		
+		
+		read.close();*/
+		
 		 
 // No Método aluno(), são informados: Nome do aluno, Nº da matricula e Curso exercido.
 		a.aluno("Sérgio Felipe Starke", 1, "Java Avançado");
@@ -41,6 +67,7 @@ a.aluno("Heloisa", 2, "Java Super Hiper Avançado");
 		a.notas[2][2] = 10;
 		
 		a.aval();
+		
 		
 	}
 }

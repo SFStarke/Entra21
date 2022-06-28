@@ -16,10 +16,10 @@ public class MainJogoVelha {
  * */		
 		x.setPlayers(5, 1);
 		x.setPlayers(3, 2);
-		x.setPlayers(6, 1);
-		x.setPlayers(2, 2);
-		x.setPlayers(7, 1);
-		x.setPlayers(1, 2);
+	//	x.setPlayers(6, 1);
+	//	x.setPlayers(2, 2);
+	//	x.setPlayers(7, 1);
+	//	x.setPlayers(1, 2);
 //		x.setPlayers(4, 1);
 		x.show();
 		
