@@ -13,19 +13,21 @@ package oop_lista_dois;
  *aprovado ou não
  */
 public class Aluno {
-	String res = "";
-	String nome, curso;
-	int matricula;
-	String disciplinas[] = new String[3];
-	float notas[][] = new float[disciplinas.length][disciplinas.length];
+	//private String res = "";
+	private String nome, curso;
+	private int matricula;
+	private String disciplinas[] = new String[3];
+	private float notas[][] = new float[disciplinas.length][disciplinas.length];
 
-	void aluno(String n, int num, String c) {
-		nome = n;
-		matricula = num;
-		curso = c;
+	public Aluno() {}
+	
+	public void aluno(String n, int num, String c) {
+		this.nome = n;
+		this.matricula = num;
+		this.curso = c;
 	}
 
-	void aval() {
+	public void aval() {
 		System.out.print("\n#############################\nALUNO(a): " + nome +
 				". MATRICULA Nº: " + matricula + ".\nCURSO DE: " + curso +
 				".\n\nAvaliação das 'Matérias' & Notas: ");
@@ -39,7 +41,48 @@ public class Aluno {
 			String res = (media/3 >=7 ) ? "APROVADO": "REPROVADO";
 			System.out.println(res);
 		}
-
 	}
 
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getCurso() {
+		return curso;
+	}
+
+	public void setCurso(String curso) {
+		this.curso = curso;
+	}
+
+	public int getMatricula() {
+		return matricula;
+	}
+
+	public void setMatricula(int matricula) {
+		this.matricula = matricula;
+	}
+
+	public String[] getDisciplinas() {
+		return disciplinas;
+	}
+
+	public void setDisciplinas(String disciplinas) {
+		for(int i = 0; i < 3 ; i++) {
+			this.disciplinas[i] = disciplinas;
+		}
+	}
+
+	public float[][] getNotas() {
+		return notas;
+	}
+
+	public void setNotas(float[][] notas) {
+		this.notas = notas;
+	}
+	
 }
