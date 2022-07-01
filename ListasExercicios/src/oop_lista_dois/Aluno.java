@@ -13,14 +13,15 @@ package oop_lista_dois;
  *aprovado ou não
  */
 public class Aluno {
-	//private String res = "";
 	private String nome, curso;
 	private int matricula;
 	private String disciplinas[] = new String[3];
 	private float notas[][] = new float[disciplinas.length][disciplinas.length];
+	private int n1 = 0;
 
-	public Aluno() {}
-	
+	public Aluno() {
+	}
+
 	public void aluno(String n, int num, String c) {
 		this.nome = n;
 		this.matricula = num;
@@ -28,9 +29,8 @@ public class Aluno {
 	}
 
 	public void aval() {
-		System.out.print("\n#############################\nALUNO(a): " + nome +
-				". MATRICULA Nº: " + matricula + ".\nCURSO DE: " + curso +
-				".\n\nAvaliação das 'Matérias' & Notas: ");
+		System.out.print("\n#############################\nALUNO(a): " + nome + ". MATRICULA Nº: " + matricula
+				+ ".\nCURSO DE: " + curso + ".\n\nAvaliação das 'Matérias' & Notas: ");
 		for (int i = 0; i < notas.length; i++) {
 			float media = 0f;
 			System.out.print("\n¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\nMATÉRIA: " + disciplinas[i] + "\n ");
@@ -38,7 +38,7 @@ public class Aluno {
 				System.out.print(notas[i][j] + ". ");
 				media += notas[i][j];
 			}
-			String res = (media/3 >=7 ) ? "APROVADO": "REPROVADO";
+			String res = (media / 3 >= 7) ? "APROVADO" : "REPROVADO";
 			System.out.println(res);
 		}
 	}
@@ -72,8 +72,22 @@ public class Aluno {
 	}
 
 	public void setDisciplinas(String disciplinas) {
-		for(int i = 0; i < 3 ; i++) {
-			this.disciplinas[i] = disciplinas;
+
+		if (this.disciplinas[n1] == null) {
+			this.disciplinas[n1] = disciplinas;
+			n1++;
+	/*	if (n1 == this.disciplinas.length) {
+				n1 = 0;
+		}*/
+			/*      Para atribuir as disciplinas no formato "for", eram preenchidas todo o vetor com
+			 *   o ultimo valor referido na classe main.
+			 *      Portanto, para solucuonar este bug, em minha singela compreenção Desenvolvistica.
+			 *   adotei a alternativa acima.
+			 * 
+			 * for(int i = 0; i < 3 ; i++) { 
+			 * 	this.disciplinas[i] = disciplinas;
+			 *  }
+			 */
 		}
 	}
 
@@ -81,8 +95,12 @@ public class Aluno {
 		return notas;
 	}
 
-	public void setNotas(float[][] notas) {
-		this.notas = notas;
+	public void setNotas(int i, int j, float notas) {
+		this.notas[i][j] = notas;
+	/*
+	 * Para esta não acontecer o mesmo que nas atribuiçôes das disciplinas,
+	 * fui mais criativo e elegante. Não obstante, deixo as duas verções para futura análise.
+	 * */
 	}
-	
+
 }

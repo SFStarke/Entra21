@@ -8,7 +8,7 @@ public class MainAluno {
 		Aluno a = new Aluno();
 		Scanner read = new Scanner(System.in);
 		String nome, cur;
-		String discFor, notaFor;
+		String discFor;
 		int matri;
 		
 		System.out.print("Informe o nº da matrícula: ");
@@ -23,11 +23,10 @@ public class MainAluno {
 		for (int i = 0; i < 3; i++) {
 			System.out.print("Disciplina: ");
 			discFor = read.next();
-			a.setDisciplinas(read.next());
-			//a.disciplinas[i] = read.next();
+			a.setDisciplinas(discFor);
 			for (int j = 0; j < 3; j++) {
-				System.out.println("Informe a "+(j+1)+"ª nota");
-				//a.notas[i][j] = read.nextFloat();
+				System.out.println(j+1+"ª nota da disciplina de "+discFor);
+				a.setNotas(i, j, read.nextFloat());
 			}
 		}
 		a.aval();
