@@ -13,21 +13,23 @@ public class MainAluno {
 		
 		System.out.print("Informe o nº da matrícula: ");
 		matri = read.nextInt();
+		read.nextLine();
 		System.out.print("Nome do aluno: ");
-		nome = read.next();
-		System.out.print("Curdo:");
-		cur = read.next();
+		nome = read.nextLine();
+		System.out.print("Curdo: ");
+		cur = read.nextLine();
 			
 		a.aluno(nome, matri, cur);
 		
 		for (int i = 0; i < 3; i++) {
 			System.out.print("Disciplina: ");
-			discFor = read.next();
+			discFor = read.nextLine();
 			a.setDisciplinas(discFor);
 			for (int j = 0; j < 3; j++) {
 				System.out.println(j+1+"ª nota da disciplina de "+discFor);
 				a.setNotas(i, j, read.nextFloat());
 			}
+			read.nextLine();
 		}
 		a.aval();
 		

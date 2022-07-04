@@ -19,8 +19,7 @@ public class Aluno {
 	private float notas[][] = new float[disciplinas.length][disciplinas.length];
 	private int n1 = 0;
 
-	public Aluno() {
-	}
+	public Aluno() {}
 
 	public void aluno(String n, int num, String c) {
 		this.nome = n;
@@ -28,9 +27,9 @@ public class Aluno {
 		this.curso = c;
 	}
 
-	public void aval() {
+	public void aval() {// Método de avaliação para aprovação ou não.
 		System.out.print("\n#############################\nALUNO(a): " + nome + ". MATRICULA Nº: " + matricula
-				+ ".\nCURSO DE: " + curso + ".\n\nAvaliação das 'Matérias' & Notas: ");
+				+ ".\nCURSO DE: " + curso + ".\n\nAvaliação das Matérias & Notas: ");
 		for (int i = 0; i < notas.length; i++) {
 			float media = 0f;
 			System.out.print("\n¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\nMATÉRIA: " + disciplinas[i] + "\n ");
@@ -94,13 +93,13 @@ public class Aluno {
 	public float[][] getNotas() {
 		return notas;
 	}
-
-	public void setNotas(int i, int j, float notas) {
-		this.notas[i][j] = notas;
 	/*
-	 * Para esta não acontecer o mesmo que nas atribuiçôes das disciplinas,
+	 * Para este método não acontecer o mesmo que nas atribuiçôes das disciplinas,
 	 * fui mais criativo e elegante. Não obstante, deixo as duas verções para futura análise.
 	 * */
+	public void setNotas(int i, int j, float notas) {
+		this.notas[i][j] = notas;
+	
 	}
 
 }
