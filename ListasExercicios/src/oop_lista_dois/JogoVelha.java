@@ -7,6 +7,7 @@ public class JogoVelha {
 	private int players = 0;   // Adiciona o nº de modo que alterne entre par e impar que serão:"X" ou "O" no jogo.
 	private String player = "o"; // "player" Etabelece se é "X" ou "O" dentro da matriz "velha"
 	private String winner; // Informa por escrito quem venceu o jogo.
+	
 	public JogoVelha() {}
 	
 	public void getBoard() {// Método para apresentar tabuleiro
