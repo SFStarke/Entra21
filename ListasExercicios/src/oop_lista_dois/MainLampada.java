@@ -7,8 +7,8 @@ public class MainLampada {
 
 		Lampada l = new Lampada("Philips", "LED", 26);
 		
-		l.LigarDesligar();
-		l.LigarDesligar();
+	//	l.LigarDesligar();
+	//	l.LigarDesligar();
 		
 		l.statusLampada();
 		
