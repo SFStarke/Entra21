@@ -1,4 +1,4 @@
-package oop_lista_dois.tres;
+package oop_lista_dois_tres;
 
 public class Quest05_Universidade {
 
