@@ -1,4 +1,4 @@
-package oop_lista_dois;
+package oop_lista_dois.tres;
 
 public class JogoVelha {
 	private String[][] velha = { { "1", "2", "3" }, { "4", "5", "6" }, { "7", "8", "9" } };

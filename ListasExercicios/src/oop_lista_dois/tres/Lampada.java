@@ -1,4 +1,4 @@
-package oop_lista_dois;
+package oop_lista_dois.tres;
 
 /*1. Escreva uma classe para representar uma lâmpada. Desenvolva 
  *métodos para ligar, desligar a lampada
