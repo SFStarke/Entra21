@@ -13,12 +13,7 @@ public class Curso {
 	public Curso(String nome, String horario) {
 		this.nomeCurso = nome;
 		this.horarioCurso = horario;
-	}
-	
-	public void setProfessor(String nome, String departamento, String email) {
-		professor.setNomeProff(nome);
-		professor.setDepartamento(departamento);
-		professor.setEmail(email);
+		alunos = new Aluno[5];
 	}
 	
 	public String status() {
@@ -49,11 +44,14 @@ public class Curso {
 		this.professor = professor;
 	}
 
-	public Aluno[] getAlunos() {
-		return alunos;
+	public Aluno getAlunos() {
+		for (int j = 0; j < alunos.length;) {
+			return alunos[j];
+		}
+		return null;
 	}
 
-	public void setAlunos(Aluno[] alunos) {
-		this.alunos = alunos;
+	public void setAlunos(int i,Aluno alunos) {
+		this.alunos[i] = alunos;
 	}
 }
