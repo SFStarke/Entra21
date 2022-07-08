@@ -2,7 +2,7 @@ package oop_lista_quatro;
 
 public class Aluno {
 	private String nomeAluno, matricula;
-	private float notas[];
+	private float notas[] = new float[2];
 
 	public Aluno() {
 	}
@@ -10,7 +10,6 @@ public class Aluno {
 	public Aluno(String nome, String matricula) {
 		this.nomeAluno = nome;
 		this.matricula = matricula;
-		this.notas = new float[4];
 	}
 
 	public String aval() {// Método de avaliação para aprovação ou não.
@@ -38,7 +37,7 @@ public class Aluno {
 		return notas;
 	}
 
-	public void setNotas(float[] notas) {
-		this.notas = notas;
+	public void setNotas(int i, float notas) {
+		this.notas[i] = notas;
 	}
 }

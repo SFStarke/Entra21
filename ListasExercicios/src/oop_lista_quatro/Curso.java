@@ -5,7 +5,7 @@ public class Curso {
 
 	private String nomeCurso, horarioCurso;
 	private Professor professor;
-	private Aluno[] alunos;
+	private Aluno[] alunos = new Aluno[2];;
 
 	public Curso() {
 	}
@@ -13,7 +13,6 @@ public class Curso {
 	public Curso(String nome, String horario) {
 		this.nomeCurso = nome;
 		this.horarioCurso = horario;
-		alunos = new Aluno[5];
 	}
 	
 	public String status() {
@@ -44,14 +43,13 @@ public class Curso {
 		this.professor = professor;
 	}
 
-	public Aluno getAlunos() {
-		for (int j = 0; j < alunos.length;) {
-			return alunos[j];
-		}
-		return null;
+	public Aluno[] getAlunos() {
+		return alunos;
 	}
 
-	public void setAlunos(int i,Aluno alunos) {
-		this.alunos[i] = alunos;
+	public void setAlunos(Aluno[] alunos) {
+		this.alunos = alunos;
 	}
+
+	
 }
