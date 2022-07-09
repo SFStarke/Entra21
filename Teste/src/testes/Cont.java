@@ -19,5 +19,10 @@ public class Cont {
 	public void setEnd(End end) {
 		this.end = end;
 	}
+	
+	public String show() {
+		return "Endereço: "+this.getEnd().getRua()+". Fone: "+this.getFone()+"\n"
+				+ "Numeros: "+this.getEnd().getNumeros()[0]+". e : "+this.getEnd().getNumeros()[1];
+	}
 
 }

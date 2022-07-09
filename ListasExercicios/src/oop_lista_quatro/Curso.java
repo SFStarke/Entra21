@@ -5,7 +5,7 @@ public class Curso {
 
 	private String nomeCurso, horarioCurso;
 	private Professor professor;
-	private Aluno[] alunos = new Aluno[2];;
+	private Aluno[] alunos = new Aluno [5];//Ao alterar vetor, NÃO esquecer TROCAR vetor da classe "Main"
 
 	public Curso() {
 	}
@@ -43,6 +43,7 @@ public class Curso {
 		this.professor = professor;
 	}
 
+	
 	public Aluno[] getAlunos() {
 		return alunos;
 	}
@@ -51,5 +52,14 @@ public class Curso {
 		this.alunos = alunos;
 	}
 
-	
+	public String showCourse() {//Método de apresentação do status do curso
+		String res = "";
+		
+		for (int i = 0; i < alunos.length; i++) {
+			res += ""+this.alunos[i].showStudent()+"\n######\n";
+		}
+		return "Curso de: "+this.nomeCurso+". Horário: "+this.horarioCurso+"\n"
+				+ "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n"+this.professor.showProfessor()+"\n"
+						+ "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\nALUNOS:\n"+res;
+	}
 }

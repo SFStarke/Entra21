@@ -35,4 +35,8 @@ public class Professor {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	public String showProfessor() {//Método de apresentação do status do professor
+		return "Professor(a): "+this.nomeProfessor+". Dapartamento: "+this.departamento+"\n"
+				+ "E-mail: "+this.email+"\n";
+	}
 }
