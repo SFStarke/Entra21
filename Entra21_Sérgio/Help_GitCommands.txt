@@ -1,10 +1,10 @@
 Comandos básicos do Terminal Git Bash
 ########################################################
 git init
-git branch –M “main”
-git config --global user.name “SFStarke“
-git config --global user.email “sergiostarke@gmail.com”
-git remote add origin https:
+git branch –M "main"
+git config --global user.name "SFStarke"
+git config --global user.email "sergiostarke@gmail.com"
+git remote add origin https:https://github.com/SFStarke/Entra21.git
 
 git status
 git add .
