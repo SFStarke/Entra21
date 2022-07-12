@@ -8,10 +8,10 @@ git remote add origin https:https://github.com/SFStarke/Entra21.git
 
 git status
 git add .
-git commit –m “Mensagem”
+git commit –m "Home01 12/07"
 
 git pull origin main     | Trazer
-git push –u origin main  | Enviar
+git push -u origin main  | Enviar
 git restore .            | to discard changes in working directory
 git pull origin main –allow-unrelated-histories | PULL
 ##########################################################
