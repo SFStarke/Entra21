@@ -5,7 +5,7 @@ public class Agenda {
 	private String nomeAgenda;
 	
 	public Agenda() {
-		contatos = new Contato[2];
+		contatos = new Contato[3];// Se alterar valor do vetor, Não alterar tambêm na Classe "Agenda".
 	}
 
 	public Contato[] getContatos() {
@@ -26,7 +26,7 @@ public class Agenda {
 	public String showAgenda() {//Apresenta status da agenda
 		String res = "";
 		for (int i = 0; i < contatos.length; i++) {
-			res +=  "CONTATO DE:\n"+contatos[i].showContatos()+"\n";
+			res +=  "CONTATO DE: "+contatos[i].showContatos()+"\n";
 		}
 		return "Nome da Agenda: "+this.getNomeAgenda()+"\n###########################\n"+res;
 	}

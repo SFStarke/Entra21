@@ -29,7 +29,7 @@ public class Contato {
 		this.emailContato = emailContato;
 	}
 	public String showContatos() {//Apresenta status do contato
-		return "Nome: "+this.getNomeContato()+". Telefone: "+this.getTelefoneContato()+"\n"
+		return this.getNomeContato()+".\nTelefone: "+this.getTelefoneContato()+"\n"
 				+ "E-mail: "+this.getEmailContato()+"\n_________________________________";
 	}
 }
