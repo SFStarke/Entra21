@@ -6,11 +6,17 @@ public class Professor {
 	public Professor() {
 	}
 
-	public  String getNomeProff() {
+	public Professor(String nomeProfessor, String departamento, String email) {
+		this.nomeProfessor = nomeProfessor;
+		this.departamento = departamento;
+		this.email = email;
+	}
+
+	public String getNomeProff() {
 		return this.nomeProfessor;
 	}
 
-	public  void setNomeProff(String nome) {
+	public void setNomeProff(String nome) {
 		this.nomeProfessor = nome;
 	}
 
@@ -28,5 +34,9 @@ public class Professor {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	public String showProfessor() {//Método de apresentação do status do professor
+		return "Professor(a): "+this.nomeProfessor+". Dapartamento: "+this.departamento+"\n"
+				+ "E-mail: "+this.email+"\n";
 	}
 }
