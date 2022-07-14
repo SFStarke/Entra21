@@ -44,7 +44,7 @@ public class ContaBancaria {
 		this.numConta = numConta;
 	}
 
-	public double getSaldo() {
+	public double getSaldo() {//Para restringir, após a virgula, o nº das casas decimais, uso Classe "Math.rand"
 		double saldo = Math.round(this.saldo * 100.0) / 100.0;
 		return saldo;
 	}
