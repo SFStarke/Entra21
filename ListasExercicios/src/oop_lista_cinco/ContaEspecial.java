@@ -15,7 +15,7 @@ public class ContaEspecial extends ContaBancaria {
 	}
 
 	@Override
-	public void sacar(double valor) {
+	public void sacar(double valor) {// LEMBRAR DE AVISAR QUE HOUVE USO DO ESPECIAL...
 		double saque = valor;
 		if (super.getSaldo() >= valor) {// Saldo suficiente.
 			super.setSaldo(super.getSaldo()-valor);
@@ -34,24 +34,24 @@ public class ContaEspecial extends ContaBancaria {
 	}
 	
 
-	@Override
-	public void depositar(double valor) {
-		double tetoLimite = 1000;
-		if(this.getLimite() < tetoLimite) { // Atribuição "limite" é o teto para referêcia, onde caso "totLimite" menor, primeiro será depositado no saldo especial "totLimite".
-			if(valor + this.getLimite() <= tetoLimite) {
-				this.setLimite(valor);
-			}else if(valor + this.getLimite() >= tetoLimite){ // Condicional para dopositar valor, de modo a restituir primeiro o saldo especiaç, para então na conta.
-				double depSaldo  = (valor + this.getLimite()) - tetoLimite;
-				double depLimite =  valor - depSaldo;
-				super.depositar(depSaldo); ;
-				this.setLimite(depLimite);
-			}
-			System.out.println("Depósito Realizado no Valor de R$"+valor);
-		}else if(this.getLimite() == tetoLimite) { // Caso saldo especial não tiver sido usado,  o valor é depositado direto na conta "saldo"
-			super.setSaldo(super.getSaldo() + valor);
-			System.out.println("Depósito Realizado no Valor de R$"+valor);
-		}
-	}
+//	@Override
+//	public void depositar(double valor) {
+//		double tetoLimite = 1000;
+//		if(this.getLimite() < tetoLimite) { // Atribuição "limite" é o teto para referêcia, onde caso "totLimite" menor, primeiro será depositado no saldo especial "totLimite".
+//			if(valor + this.getLimite() <= tetoLimite) {
+//				this.setLimite(valor);
+//			}else if(valor + this.getLimite() >= tetoLimite){ // Condicional para dopositar valor, de modo a restituir primeiro o saldo especiaç, para então na conta.
+//				double depSaldo  = (valor + this.getLimite()) - tetoLimite;
+//				double depLimite =  valor - depSaldo;
+//				super.depositar(depSaldo); ;
+//				this.setLimite(depLimite);
+//			}
+//			System.out.println("Depósito Realizado no Valor de R$"+valor);
+//		}else if(this.getLimite() == tetoLimite) { // Caso saldo especial não tiver sido usado,  o valor é depositado direto na conta "saldo"
+//			super.setSaldo(super.getSaldo() + valor);
+//			System.out.println("Depósito Realizado no Valor de R$"+valor);
+//		}
+//	}
 
 	public double getLimite() {
 		return limite;

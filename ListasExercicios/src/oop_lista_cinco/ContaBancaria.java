@@ -45,6 +45,7 @@ public class ContaBancaria {
 	}
 
 	public double getSaldo() {
+		double saldo = Math.round(this.saldo * 100.0) / 100.0;
 		return saldo;
 	}
 
