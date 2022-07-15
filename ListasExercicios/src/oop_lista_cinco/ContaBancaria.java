@@ -45,7 +45,7 @@ public class ContaBancaria {
 	}
 
 	public double getSaldo() {//Para restringir, após a virgula, o nº das casas decimais, uso Classe "Math.rand"
-		double saldo = Math.round(this.saldo * 100.0) / 100.0;
+		double saldo = Math.round(this.saldo * 100.0) / 100.0; // Elimina números decimais exedentes pós virgula.
 		return saldo;
 	}
 

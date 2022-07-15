@@ -24,8 +24,9 @@ public class ContaPoupanca extends ContaBancaria {
 	public void calcularNovoSaldo() {// Calcula a taxa de rendimeto e atribui ao saldo.
 		if (dia == this.getDiaRendimento()) {
 			double taxa = super.getSaldo() * 0.006; // Referenta a média mensal de "0,6%" ao mês.
+			double taxaDecimal = Math.round(taxa * 100.0) / 100.0;// Elimina números decimais exedentes pós virgula.
 			super.setSaldo(taxa + super.getSaldo());
-			this.setStatusDiaRendimento("Para hoje dia "+this.dia+", sua conta teve um rendimento de R$"+taxa);
+			this.setStatusDiaRendimento("Para hoje dia "+this.dia+", sua conta teve um rendimento de R$"+taxaDecimal);//Mudar para taxa
 		}else {
 			this.setStatusDiaRendimento("Para o dia "+this.getDiaRendimento()+", será o aniverssário do rendimento mensal de sua conta.");
 		}
