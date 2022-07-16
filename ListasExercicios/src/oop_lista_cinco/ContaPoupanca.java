@@ -50,7 +50,7 @@ public class ContaPoupanca extends ContaBancaria {
 
 	@Override
 	public String toString() {
-		return "\n###############################\nConta Poupanca nº " + super.getNumConta() + " | Cliente: "
+		return "\n###############################\nConta Poupanca nº " + super.getNumConta() + " | Titular: "
 				+ super.getNomeCliente() + "\n[Saldo da conta: R$" + super.getSaldo()
 				+ "]\n"+this.getStatusDiaRendimento()+"\n###############################\n";
 	}

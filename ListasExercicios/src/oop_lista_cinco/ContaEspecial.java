@@ -2,6 +2,7 @@ package oop_lista_cinco;
 
 public class ContaEspecial extends ContaBancaria {
 	private double limite;
+	private double limiteTeto; // Fixa o valor pré estabelecido limite
 	private String infoLimite;//Informa se saldo esecial é ou não usada.
 
 	public ContaEspecial() {this.setInfoLimite("Á DISPOSIÇÃO");}
@@ -34,26 +35,27 @@ public class ContaEspecial extends ContaBancaria {
 				this.setInfoLimite("Você usou o saldo especial no valor de R$"+diferenca);//Informa saldo esecial é realisado.
 		}else if(super.getSaldo() + this.getLimite() < valor) {// Saldo indesponivel.
 			System.out.println("Saldo insuficiente para saque");
-			this.setInfoLimite("INDISPONÍVEL");
+			//this.setInfoLimite("INDISPONÍVEL");
 		}
 	}
 
 	@Override
 	public void depositar(double valor) {
-		double tetoLimite = 1000;//Atributo para simples referência aos calculos de correção.
+		double tetoLimite = this.limiteTeto;//Atributo para simples referência aos calculos de correção.
 		
 		if(this.getLimite() < tetoLimite) { // Atribuição "limite" é o teto para referêcia, onde caso "totLimite" menor, primeiro será depositado no saldo especial "totLimite".
 			if(valor + this.getLimite() <= tetoLimite) {
 				this.setLimite(this.getLimite() + valor);
 				this.setInfoLimite("Á DISPOSIÇÃO");
+				System.out.println("Depósito Realizado em Saldo Especial no Valor de R$"+valor);	
 			}else if(valor + this.getLimite() >= tetoLimite){ // Condicional para dopositar valor, de modo a restituir primeiro o saldo especiaç, para então saldo daconta.
 				double depSaldo  = (valor + this.getLimite()) - tetoLimite; // Valor para saldo da conta 
 				double depLimite =  valor - depSaldo; // Valor para Saldo Especial
 				super.depositar(depSaldo); //
 				this.setLimite(this.getLimite() + depLimite);
 				this.setInfoLimite("Á DISPOSIÇÃO");
+				System.out.println("Depósito Realizado em Saldo Especial no Valor de R$"+(valor-depSaldo));
 			}
-			System.out.println("Depósito Realizado no Valor de R$"+valor);
 		}else if(this.getLimite() == tetoLimite) { // Caso saldo especial não tiver sido usado,  o valor é depositado direto na conta "saldo"
 			super.setSaldo(super.getSaldo() + valor);
 			System.out.println("Depósito Realizado no Valor de R$"+valor);
@@ -77,10 +79,18 @@ public class ContaEspecial extends ContaBancaria {
 		this.infoLimite = infoLimite;
 	}
 
+	public double getLimiteTeto() {
+		return limiteTeto;
+	}
+
+	public void setLimiteTeto(double limiteTeto) {
+		this.limiteTeto = limiteTeto;
+	}
+
 	@Override
 	public String toString() {
 		return "\n###############################\nConta Especial nº "+super.getNumConta()+
-	" | Cliente: "+super.getNomeCliente()+"\n[Saldo da conta: R$"+super.getSaldo()+"] [Saldo Especial: R$" + limite + "]"
+	" | Titular: "+super.getNomeCliente()+"\n[Saldo da conta: R$"+super.getSaldo()+"] [Saldo Especial: R$" + limite + "]"
 			+ "\nSaldo Especial: "+this.getInfoLimite()+"\n###############################\n";
 	}
 	

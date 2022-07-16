@@ -56,18 +56,64 @@ public class MainContaCancaria {
 						break;
 					}
 					System.out.println(poupanca.toString());
-					System.out.println("Deseja realizar outra transação?\n[ S ] Sin\n[ N ] Não\n");
-				 res = read.next();
-				loop2 = res.equalsIgnoreCase("s") ? true: false;	
-					
+					do {
+						System.out.println("Deseja realizar outra transação?\n[ S ] Sin\n[ N ] Não\n");
+						res = read.next();
+						if(! res.equalsIgnoreCase("s") && ! res.equalsIgnoreCase("n")){
+							System.out.println("Comando Invalido:\nTENTE NOVAMENTE\n");
+						}else {
+							loop2 = res.equalsIgnoreCase("s") ? true: false;	
+							break;
+						}
+					}while(loop == true);
 				}while(loop2 == true);
 				
 			}else if(resOperacao.equalsIgnoreCase("CE")){// Condicional Conta Especial
-				//ContaEspecial ce = new ContaEspecial("Felipe",2, 500, 1000); // String nomeCliente, int numConta, double saldo, double limite
+				System.out.print("Informe o nome do titular: ");
+				especial.setNomeCliente(read.nextLine());
+				System.out.print("Informe o nº da conta: ");
+				especial.setNumConta(read.nextInt());
+				//read.nextLine();
+				System.out.print("Informe o saldo inicial: ");
+				especial.setSaldo(read.nextDouble());
+				System.out.print("Informe o valor do saldo especial:");
+				double leia = read.nextDouble();
+				especial.setLimite(leia);
+				especial.setLimiteTeto(leia);
 				
+				do {// Início do looling "Conta especial"
+					String res;
+					String statusConta = resOperacao.equalsIgnoreCase("CE") ? especial.toString() : poupanca.toString() ;
+					System.out.println(statusConta);
+					System.out.print("\n*******************\nESCOLHA UMA DAS OPÇÕES:\n"
+							+ "[ 1 ] Saque\n[ 2 ] Depósito\n[ 3 ] Sair da Opção\n*******************\n");
+					resOpcaoSaqueDeposito = read.next();
+					if(! resOpcaoSaqueDeposito.equalsIgnoreCase("1") && ! resOpcaoSaqueDeposito.equalsIgnoreCase("2") && ! resOpcaoSaqueDeposito.equalsIgnoreCase("3")) {// Condicional para restrinção de comandos
+						System.out.println("Comando Invalido:\nTENTE NOVAMENTE\n");
+						continue;
+					}else if(resOpcaoSaqueDeposito.equalsIgnoreCase("1")){
+						System.out.print("Valor do saque: ");
+						especial.sacar(read.nextDouble());
+					}else if(resOpcaoSaqueDeposito.equalsIgnoreCase("2")) {
+						System.out.print("Valor do depósito: ");
+						especial.depositar(read.nextDouble());;
+					}else if(resOpcaoSaqueDeposito.equalsIgnoreCase("3")) {
+						break;
+					}
+					System.out.println(especial.toString());
+					do { //Início do looling restrinção do comando "S e ou N"
+						System.out.println("Deseja realizar outra transação?\n[ S ] Sin\n[ N ] Não\n");
+						res = read.next();
+						if(! res.equalsIgnoreCase("s") && ! res.equalsIgnoreCase("n")){
+							System.out.println("Comando Invalido:\nTENTE NOVAMENTE\n");
+						}else {
+							loop2 = res.equalsIgnoreCase("s") ? true: false;	
+							break;
+						}
+					}while(loop == true);//Fim do looling restrinção do comando "S e ou N"
+				}while(loop2 == true); //Fim do looling "Conta especial"
 			}
-			System.out.println("RESULTADO DA TRANSAÇÃO DE HOJE:");
-			System.out.println(poupanca.toString());
+			System.out.println("TRANSAÇÃO ENCERRADA:");
 			do {// Looping para restrinção de apenas dois comandos "C e ou S"
 				System.out.println("Para Criar Nova Conta: [ C + Enter ]\n\n"
 						+ "            Para Sair: [ S + Enter ]");
@@ -81,7 +127,7 @@ public class MainContaCancaria {
 			loop = resLoop.equalsIgnoreCase("s") ? false : true;
 		} while (loop == true); // Fim looping Main
 		
-		System.out.println("\nO B R I G A D O   P O R   P A R T I C I P A R\n             ESPERO QUE TENHA GOSTADO\n\nF I Q U E   B E M\nAtenciosamente: Rafael Gaspar, Emaqnuel Girardi e Sérgio F. Starke");
+		System.out.println("\nO B R I G A D O   P O R   P A R T I C I P A R\n             ESPERO QUE TENHA GOSTADO\n\nF I Q U E   B E M   P R O F.    H E L O I S A\nAtenciosamente: Rafael Gaspar, Emaqnuel Girardi e Sérgio F. Starke");
 		read.close();
 	}
 	/*
