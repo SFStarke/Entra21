@@ -15,16 +15,17 @@ public class MainContaCancaria {
 		boolean loop2 = true;
 		String resLoop, resOperacao, resOpcaoSaqueDeposito;
 		do {// Início looping Main
-			do {
+			do {// Início looping de restrinção
 				System.out.println("Quais das contas deseja cadastra?\n"
 						+ "[ CP ] Conta Poupança\n[ CE ] Conta Especial");
 				resOperacao = read.next();
+				// Abaixo Condicional de Restrinção de Comando de Entrada
 				if(! resOperacao.equalsIgnoreCase("CP") && ! resOperacao.equalsIgnoreCase("CE")) {
 					System.out.println("Comando Invalido:\nTENTE NOVAMENTE\n");
 				}else {
 					break;
 				}
-			}while(loop == true);
+			}while(loop == true);// Fim looping de restrinção
 			read.nextLine();
 			if(resOperacao.equalsIgnoreCase("CP")) {// Condicional Conta Poupança
 				System.out.print("Informe o nome do titular: ");
@@ -37,7 +38,7 @@ public class MainContaCancaria {
 				poupanca.setDiaRendimento(read.nextInt());
 				poupanca.calcularNovoSaldo();
 				
-				do {
+				do {// Início do looling "Conta Poupança"
 					String res;
 					System.out.println(poupanca.toString());
 					System.out.print("\n*******************\nESCOLHA UMA DAS OPÇÕES:\n"
@@ -56,7 +57,7 @@ public class MainContaCancaria {
 						break;
 					}
 					System.out.println(poupanca.toString());
-					do {
+					do {//Início do looling restrinção do comando "S e ou N"
 						System.out.println("Deseja realizar outra transação?\n[ S ] Sin\n[ N ] Não\n");
 						res = read.next();
 						if(! res.equalsIgnoreCase("s") && ! res.equalsIgnoreCase("n")){
@@ -65,8 +66,8 @@ public class MainContaCancaria {
 							loop2 = res.equalsIgnoreCase("s") ? true: false;	
 							break;
 						}
-					}while(loop == true);
-				}while(loop2 == true);
+					}while(loop == true);//Fim do looling restrinção do comando "S e ou N"
+				}while(loop2 == true);// Fim do looling "Conta Popança"
 				
 			}else if(resOperacao.equalsIgnoreCase("CE")){// Condicional Conta Especial
 				System.out.print("Informe o nome do titular: ");
