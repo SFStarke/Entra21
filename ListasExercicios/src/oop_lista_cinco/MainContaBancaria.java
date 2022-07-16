@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 //import java.util.Calendar;
 
-public class MainContaCancaria {
+public class MainContaBancaria {
 
 	public static void main(String[] args) {
 		// Calendar d = Calendar.getInstance();
