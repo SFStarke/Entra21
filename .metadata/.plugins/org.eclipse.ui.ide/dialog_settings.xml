@@ -8,6 +8,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\Sérgio Felipe Starke\Desktop\Rafael&apos;s\Entra21Java-main"/>
+			<item value="C:\Users\Sérgio Felipe Starke\Desktop\Rafael&apos;s\orientObj02"/>
 			<item value="C:\Users\sergio.starke\Desktop\eclipse-workspace\Teste"/>
 			<item value="C:\Users\sergio.starke\Desktop\eclipse-workspace"/>
 			<item value="C:\Users\Sérgio Felipe Starke\Desktop\eclipse-workspace"/>
