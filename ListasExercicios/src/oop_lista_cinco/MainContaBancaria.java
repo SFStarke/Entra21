@@ -16,7 +16,7 @@ public class MainContaBancaria {
 		String resLoop, resOperacao, resOpcaoSaqueDeposito;
 		do {// Início looping Main
 			do {// Início looping de restrinção
-				System.out.println("Quais das contas deseja cadastra?\n"
+				System.out.println("Qual das contas deseja cadastrar?\n"
 						+ "[ CP ] Conta Poupança\n[ CE ] Conta Especial");
 				resOperacao = read.next();
 				// Abaixo Condicional de Restrinção de Comando de Entrada
@@ -58,7 +58,7 @@ public class MainContaBancaria {
 					}
 					System.out.println(poupanca.toString());
 					do {//Início do looling restrinção do comando "S e ou N"
-						System.out.println("Deseja realizar outra transação?\n[ S ] Sin\n[ N ] Não\n");
+						System.out.println("Deseja realizar outra transação?\n[ S ] Sim\n[ N ] Não\n");
 						res = read.next();
 						if(! res.equalsIgnoreCase("s") && ! res.equalsIgnoreCase("n")){
 							System.out.println("Comando Invalido:\nTENTE NOVAMENTE\n");
@@ -103,7 +103,7 @@ public class MainContaBancaria {
 					}
 					System.out.println(especial.toString());
 					do { //Início do looling restrinção do comando "S e ou N"
-						System.out.println("Deseja realizar outra transação?\n[ S ] Sin\n[ N ] Não\n");
+						System.out.println("Deseja realizar outra transação?\n[ S ] Sim\n[ N ] Não\n");
 						res = read.next();
 						if(! res.equalsIgnoreCase("s") && ! res.equalsIgnoreCase("n")){
 							System.out.println("Comando Invalido:\nTENTE NOVAMENTE\n");
@@ -128,7 +128,7 @@ public class MainContaBancaria {
 			loop = resLoop.equalsIgnoreCase("s") ? false : true;
 		} while (loop == true); // Fim looping Main
 		
-		System.out.println("\nO B R I G A D O   P O R   P A R T I C I P A R\n             ESPERO QUE TENHA GOSTADO\n\nF I Q U E   B E M   P R O F.    H E L O I S A\nAtenciosamente: Rafael Gaspar, Emaqnuel Girardi e Sérgio F. Starke");
+		System.out.println("\nO B R I G A D O   P O R   P A R T I C I P A R\n             ESPERO QUE TENHA GOSTADO\n\nF I Q U E   B E M   P R O F.    H E L O I S A\nAtenciosamente: Rafael Gaspar, Emanuel Girardi e Sérgio F. Starke");
 		read.close();
 	}
 	/*
