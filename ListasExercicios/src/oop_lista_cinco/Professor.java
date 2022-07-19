@@ -1,6 +1,6 @@
 package oop_lista_cinco;
 
-public class Professor {
+public class Professor extends Funcionario {
 	private Disciplina[] disciplina;
 	private String titulo;
 	private String area;
