@@ -7,23 +7,31 @@ public class Quest02 {
 
 	public static void main(String[] args) {
 		Scanner read = new Scanner(System.in);
-		int res = 0;
+		boolean loop = true;
+		
 		do {
+			loop = true;
 			try {
-				System.out.println("Eu sei dividir");
-				System.out.print("Informe o primeiro valoor: ");
+				System.out.println("\n¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\nEu sei dividir...");
+				System.out.print("1º valor: ");
 				int x = read.nextInt();
-				System.out.print("Informe o seugundo valor: ");
+				System.out.print("2º valor: ");
 				int y = read.nextInt();
 				double r = (x / y);
-				System.out.println("Resultado da Divisão é: "+r);
-				read.close();
+				System.out.println("\nResultado: "+x+" / "+ y+" = " + r);
 				
-			}catch(InputMismatchException e){
-				System.out.print("Informe apenas números. ");
+			} catch (InputMismatchException e) {
+				System.out.print("\n##################\nINFORME APENAS NÚMEROS.\nTente novamente\n####################\n");
+				read.nextLine();
+				loop = false;
+			} catch(ArithmeticException e) {
+				System.out.println("\n##################\nNÚMERO 0(ZERO) NÃO É ACEITO COMO DIVISOR.\nTente novamente\n####################\n");
+				read.nextLine();
+				loop = false;
 			}
-			res++;
-		}while(res == 3);
-	}
 
+		}while(loop == false);
+		
+		read.close();
+	}
 }
