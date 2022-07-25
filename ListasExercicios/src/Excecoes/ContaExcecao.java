@@ -4,9 +4,10 @@ package Excecoes;
 // Tornando assim esta classe uma  Classe de Especialização.
 public class ContaExcecao extends Exception {
 
+// Criando uma NOVA EXCEÇÃO para a classe "Throwable" atravéz da sobrescrição do método "getMessage".
 	@Override
-	public String getMessage() {// Sobrescrição do Método "getMessage" da classe "Throwable"
+	public String getMessage() {
 		// Ao invocar este método, deverá ser pelo nome da classe "ContaExecao"
-		return "Saldo inssuficiênte em conta...";
+		return "Saldo insuficiente em conta...";
 	}
 }
