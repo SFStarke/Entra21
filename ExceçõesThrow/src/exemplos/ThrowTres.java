@@ -7,7 +7,12 @@ public class ThrowTres {
 	 * em seguida lançada na instrução throw.
 	 */
 	public static void main(String[] args) {
-		 saque(400);
+		saque(400);
+//		try {
+//			saque(401);
+//		} catch (Exception e) {
+//			System.out.println("Saldo insuficiênte "+ e);
+//		}
 	}
 // FOTRA DO MÉTODO MAIN...
 	public static void saque(double valor) {// MÉTODO SEM LANCE DE EXCEÇÃO "throws".
@@ -18,5 +23,4 @@ public class ThrowTres {
 	      System.out.println("Valor retirado da conta: R$"+valor);
 	    }
 	  }
-	  
 }
