@@ -22,7 +22,8 @@ cd bin
 mysql -u root -p  -h 127.0.0.1
 
 show databases; / use nomedatabase; / status; / show tables; 
-describe nomedatabase;
+describe nomedatabase; / show create database cadastro_march_2022;
+show create table pessoa;
 ##########################################################
 •	Os comandos que seguem, serão apenas usados em sua inicialização. (Atenção para as aspas, espaços...).
 Iniciando protocolo: git init
